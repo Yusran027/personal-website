@@ -105,10 +105,13 @@ body {
   position: relative;
 }
 
+
+/* Footer start */
 footer {
   position: relative;
   height: 22rem;
   width: 100%;
+  background-image: url('../assets/img/Footer.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
