@@ -105,13 +105,12 @@ body {
   position: relative;
 }
 
-
 /* Footer start */
 footer {
   position: relative;
   height: 22rem;
   width: 100%;
-  background-image: url('../assets/img/Footergit aurora.svg');
+  background-image: url('../assets/img/Footer aurora.svg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
