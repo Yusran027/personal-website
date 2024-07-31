@@ -1,6 +1,6 @@
 :root {
   --primary: #000527;
-  --secondary: #4cd9c4;
+  --secondary: #00c8b9;
   --bg: #041020;
   --font-size-h1: 3rem; /* 48px */
   --font-size-h2: 2.5rem; /* 40px */
@@ -29,6 +29,7 @@ body {
   font-family: 'Fira Code', monospace;
   background-color: var(--bg);
 }
+
 
 /* .social & email */
 
@@ -108,7 +109,7 @@ body {
   53%,
   57%,
   100% {
-    text-shadow: 0 0 4px #bc13fe, 0 0 11px #0fa, 0 0 19px #fff, 0 0 40px #bc13fe, 0 0 80px #bc13fe, 0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
+    text-shadow: 0 0 4px #bc13fe, 0 0 11px #00c8b9, 0 0 19px #fff, 0 0 40px #bc13fe, 0 0 80px #bc13fe, 0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
   }
 
   20%,
@@ -128,7 +129,6 @@ body {
 }
 
 /* navbar start */
-
 .navbar {
   position: fixed;
   top: 1rem;
@@ -151,7 +151,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.6rem;
-  box-shadow: 2, 2, 2 #4cd9c4;
+  box-shadow: 2, 2, 2 #00c8b9;
 }
 
 .nav-links {
@@ -170,16 +170,37 @@ body {
   color: #fff;
   font-size: 1rem;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .nav-links a:hover {
   color: var(--secondary);
 }
 
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: var(--secondary);
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+  background: var(--secondary);
+}
+
 /* Menampilkan navbar dengan efek fade-in */
 .navbar-show {
   opacity: 1;
 }
+
 
 /* Hero Start */
 .hero {
@@ -192,16 +213,19 @@ body {
   position: relative;
 }
 
-.hero h1 {
+.hero .container {
   font-size: var(--font-size-h1);
+  text-align: center;
+
 }
 
 /* project start */
 .project {
   width: 100%;
-  height: 100vh;
+  position: relative;
   display: flex;
   justify-content: center;
+  text-align: center;
   padding: 3rem 7%;
 }
 
@@ -213,15 +237,15 @@ body {
 
 .project .row {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .project .row .card {
   display: flex;
+  align-items: start;
   flex-direction: column;
+  margin-top: 3rem;
   width: 16rem;
   height: 25rem;
   padding: 1rem;
@@ -230,19 +254,9 @@ body {
   backdrop-filter: blur(0.1rem);
   border: 1px solid var(--secondary);
   z-index: 10;
+  transition: background-color 0.3s ease;
 }
-.project .row .card.active {
-  display: flex;
-  flex-direction: column;
-  width: 16rem;
-  height: 25rem;
-  padding: 1rem;
-  border-radius: 15px;
-  background: rgba(0, 255, 170, 0.11);
-  backdrop-filter: blur(0.1rem);
-  border: 1px solid var(--secondary);
-  z-index: 10;
-}
+
 .project .row .card img {
   width: 100%;
   height: 10rem;
@@ -258,9 +272,14 @@ body {
   font-size: 0.8rem;
   margin: 0.2rem 0 0.7rem 0;
   opacity: 0.5;
+  text-align: start;
+}
+.project .row .card .item-tool{
+  display: flex;
+  gap: 0.5rem;
 }
 
-.project .row .card .tool {
+.project .row .card  .tool {
   height: 1.5rem;
   width: fit-content;
   border: 1px solid var(--secondary);
@@ -289,13 +308,68 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem;
-  /* margin: 0.8rem auto; */
   text-decoration: none;
   color: #fff;
   margin-top: auto;
 }
+
+.project .row .card .link:hover {
+  background: #00c8bb2c;
+}
+
 .project .row .card .link a {
-  font-size: var(--font-size-p);
+  font-size: 0.8rem;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project .row .card .link span {
+  color: var(--secondary);
+  font-size: 0.8rem;
+}
+
+/* services start */
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 7%;
+}
+.services .content .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  height: 20rem;
+  width: 15rem;
+  background: #060c21;
+  padding: 2rem;
+}
+.services .content .box:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+.services .content .box:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(40px);
+}
+.services .content .box:after,
+.services .content .box:before {
+  background: linear-gradient(235deg, #bc13fe, #060c21, #00c8b9);
 }
 
 /* Footer start */
