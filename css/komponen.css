@@ -1,7 +1,11 @@
 
+/* Button text typing */
+
+
+
+
 /* Button Primary */
 .splash-button {
-  padding: 1em 2em;
   background-color: rgba(0, 200, 185, 0);
   color: #fff;
   border-radius: 5px;
@@ -10,7 +14,10 @@
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px rgba(0, 200, 185, 0.8);
-  z-index: 1;
+  z-index: 100;
+  width: 9rem;
+  height: 3rem;
+  margin: 2rem 0 0 0;
 }
 
 .splash-button:before,
@@ -83,3 +90,6 @@
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+
+
+

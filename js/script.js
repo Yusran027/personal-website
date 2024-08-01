@@ -36,3 +36,14 @@ var bubblyButtons = document.getElementsByClassName('splash-button');
 for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener('click', animateButton, false);
 }
+
+
+
+// memberikan kelas aktif pada card project
+// document.getElementById('card').addEventListener('click', function() {
+//   var heroSection = document.getElementById('card');
+//   heroSection.classList.toggle('active');
+// });
+
+
+
