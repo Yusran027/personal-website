@@ -25,8 +25,6 @@
   color: #fff;
 }
 
-
-
 h1 {
   font-size: var(--font-size-h1);
 }
@@ -58,7 +56,7 @@ span {
   width: 5rem;
   border: 1px solid white;
 }
-.career img.bima {
+img.bima {
   position: absolute;
   right: 0;
   margin-top: -8rem;
@@ -71,6 +69,11 @@ span {
 body {
   font-family: 'Fira Code', monospace;
   background-color: var(--bg);
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  margin-right: -2rem;
+  padding: 0;
 }
 
 .sub-title {
@@ -313,8 +316,7 @@ body {
 }
 
 /* services start */
-.services {
-}
+
 /* project start */
 .project {
   width: 100%;
@@ -337,8 +339,8 @@ body {
   align-items: start;
   flex-direction: column;
   margin-top: 2rem;
-  width: 16rem;
-  height: 26rem;
+  width: 20rem;
+  height: 30rem;
   padding: 1rem;
   border-radius: 1rem;
   backdrop-filter: blur(0.1rem);
@@ -355,7 +357,7 @@ body {
 
 .project .row .card .img-wrapper {
   width: 100%;
-  height: 10rem;
+  height: 12rem;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
@@ -369,7 +371,6 @@ body {
   height: 100%;
   transition: transform 500ms ease;
   object-fit: cover;
- 
 }
 
 .project .row .card h6 {
@@ -404,12 +405,13 @@ body {
 }
 
 .project .row .card .tool {
-  height: 1.5rem;
+  height: 1.8rem;
   width: fit-content;
   border: 1px solid var(--secondary);
-  border-radius: 5px;
+  border-radius: 4px;
   color: #fff;
   display: flex;
+  align-items: center;
   align-self: start;
   gap: 0.2rem;
   padding: 0.2rem 0.5rem;
@@ -481,7 +483,6 @@ body {
   /* overflow: hidden; */
 }
 
-
 .about .content .box .sub-title {
   position: absolute;
   top: -5rem;
@@ -549,10 +550,10 @@ body {
 .about .content .about-me {
   display: flex;
   flex-direction: column;
-  width: 50rem;
+  width: 40rem;
 }
 .about .content .about-me h4 {
-  margin:2rem 0;
+  margin: 2rem 0;
 }
 .about .content .about-me p {
   margin-bottom: 2rem;
@@ -564,11 +565,11 @@ body {
   align-items: center;
 }
 .about .content .about-me .email-container p,
-.about .content .about-me .home-container p{
+.about .content .about-me .home-container p {
   margin-bottom: 0rem;
 }
 .about .content .about-me .email-container img,
-.about .content .about-me .home-container img{
+.about .content .about-me .home-container img {
   width: 2rem;
   height: 2rem;
 }
@@ -605,28 +606,6 @@ body {
   margin: 3rem 0 3rem 0;
 }
 
-.career .line {
-  position: absolute;
-  background-color: aqua;
-  box-shadow: 0px 0px 12px aqua;
-  width: 4px;
-  height: 110vh;
-  margin-top: 13rem;
-  border-radius: 5rem;
-  overflow: hidden;
-  z-index: -1;
-}
-.career .line .scanner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: white;
-  width: 100%;
-  height: 20px;
-  border-radius: 50%;
-  animation: scanner-loop 3s ease-in-out infinite;
-}
-
 @keyframes scanner-loop {
   0% {
     top: 0;
@@ -638,14 +617,6 @@ body {
     top: 0;
   }
 }
-/* .career .vertical-line {
-  height: 110vh;
-  margin-top: 13rem;
-  border: 0.2rem solid #fff;
-  position: absolute;
-  z-index: -1;
-  border-radius: 20rem;
-} */
 
 .career .gradient-cards {
   display: flex;
@@ -665,9 +636,42 @@ body {
 .career .gradient-cards .row {
   display: flex;
   position: relative;
-  gap: 3rem;
   justify-content: center;
+  align-items: start;
   width: 100%;
+}
+
+.career .gradient-cards .row .logo-inst {
+  display: flex;
+  justify-content: center;
+  width: 7rem;
+}
+
+.career .gradient-cards .row .logo-inst a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.career .gradient-cards .line {
+  position: absolute;
+  background-color: aqua;
+  box-shadow: 0px 0px 12px aqua;
+  width: 4px;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  top: calc(0rem + 0rem + 4px); /* Posisikan di bawah gambar (tinggi gambar + margin-top + border) */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.career .gradient-cards .line .scanner {
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  animation: scanner-loop 3s ease-in-out infinite;
 }
 
 .career .gradient-cards .card {
@@ -746,7 +750,7 @@ body {
   margin-top: 2rem;
   border: 2px solid #fff;
   border-radius: 50%;
-  align-self: start;
+  align-self: center;
   box-shadow: 0 0 12px #000000;
   object-fit: cover;
   transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* Menambahkan box-shadow ke dalam transition */
@@ -756,10 +760,10 @@ body {
   box-shadow: 0 0 12px #00c8b9;
 }
 
-.career .gradient-cards .row .logo-img {
+/* .career .gradient-cards .row .logo-img {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .career .gradient-cards .row .card-null {
   /* background-color: #00c8b9; */
@@ -773,23 +777,175 @@ body {
   flex-direction: column;
 }
 
-/* Footer start */
-footer {
-  position: relative;
-  height: 22rem;
-  width: 100%;
-  background-image: url('../assets/img/Footer aurora.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+/* skills start */
+
+.skill {
+  height: 100vhrem;
+}
+/* Tools start*/
+
+.skill .app {
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  color: #fff;
   justify-content: center;
+  flex-direction: column;
+}
+
+.skill .app .tag-list {
+  width: 35%;
+  max-width: 90vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.skill .app .loop-slider {
+  .inner {
+    display: flex;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+  }
+}
+
+.skill .app .loop-slider .tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: var(--bg);
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  margin-right: 1rem;
+  cursor: default;
+  transition: all 600ms;
+  box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%), 0 0.1rem 0.5rem rgb(0 0 0 / 30%), 0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+}
+.skill .app .loop-slider .tag:hover {
+  box-shadow: 0 0rem 0.8rem rgb(0, 200, 185), 0 0rem 0.8rem rgb(0, 200, 185), 0 0rem 1.4rem rgb(0, 200, 185);
+}
+.skill .app .loop-slider .tag img {
+  color: rgb(0, 200, 185);
+  height: 2rem;
+}
+
+.skill .app .fade {
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--bg), transparent 30%, transparent 70%, var(--bg));
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Footer start */
+
+#footer {
+  position: relative;
+  height: 35rem;
+  width: 100%;
+  background-image: url('../assets/img/Footer aurora-01.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom; /* Posisikan gambar di tengah dan bawah */
   -webkit-mask-image: linear-gradient(to top, rgba(4, 16, 32, 1) 60%, transparent 100%);
   mask-image: linear-gradient(to top, rgba(4, 16, 32, 1) 60%, transparent 100%);
 }
-footer h3 {
-  font-size: var(--font-size-h3);
+
+
+.footer .row {
+  position: absolute;
+  overflow: hidden;
+  bottom: 3rem;
+  background-size: cover;
+  padding: 0 13rem;
+  display: flex;
+  width: 100%;
+  color: #fff;
+  justify-content: space-around; /* Atau gunakan space-between */
+  align-items: start;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer .row h3,
+.footer .row h5 {
+  margin-bottom: 2rem;
+}
+
+.footer .row a {
+  font-size: 1rem;
+  margin: 1rem 0;
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: inherit; /* Warna teks sesuai dengan elemen induk */
+  outline: none; /* Menghilangkan outline pada fokus */
+  cursor: pointer; /* Menambahkan pointer untuk menunjukkan elemen bisa diklik */
+}
+
+.footer .menu,
+.footer .eksplore {
+  display: flex;
+  flex-direction: column;
+}
+.footer .menu a{
+  margin-bottom: 0.2rem;
+  
+}
+
+.footer .eksplore p {
+  font-size: 1;
+  width: 30rem;
+  margin-bottom: 1rem;
+}
+.footer .eksplore img {
+  height: 5rem;
+  width: 15rem;
+  margin-top: 2rem;
+}
+
+.footer .contact {
+  display: flex;
+  flex-direction: column;
+}
+.footer .contact .adress,
+.footer .contact .email,
+.footer .contact .phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.footer .contact img {
+  height: 2rem;
+}
+
+.footer .copyright {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  font-size: 0.9rem; /* Sesuaikan ukuran font */
+}
+
+.footer .copyright p {
+  margin: 0;
 }
 
 /* laptop */
