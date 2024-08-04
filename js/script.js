@@ -19,7 +19,6 @@ window.addEventListener('scroll', function () {
   lastScrollTop = scrollTop;
 });
 
-
 // Tombol Splash Buble
 var animateButton = function (e) {
   e.preventDefault;
@@ -37,13 +36,46 @@ for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener('click', animateButton, false);
 }
 
+// Modal Sertificate
+// Get the modal
+var modal = document.getElementById('myModal');
 
+// Get the button that opens the modal
+var btn = document.getElementById('openModalBtn');
 
-// memberikan kelas aktif pada card project
-// document.getElementById('card').addEventListener('click', function() {
-//   var heroSection = document.getElementById('card');
-//   heroSection.classList.toggle('active');
-// });
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName('close')[0];
 
+// When the user clicks the button, open the modal with animation
+btn.onclick = function () {
+  modal.style.display = 'block';
+  setTimeout(function () {
+    modal.querySelector('.modal-content').classList.add('show');
+  }, 10);
+};
 
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.querySelector('.modal-content').classList.remove('show');
+  setTimeout(function () {
+    modal.style.display = 'none';
+  }, 500);
+};
+// When the user clicks on container modal, close the modal
+// var container = document.getElementsByClassName('container')[0];
+// container.onclick = function () {
+//   modal.querySelector('.modal-content').classList.remove('show');
+//   setTimeout(function () {
+//     modal.style.display = 'none';
+//   }, 500);
+// };
 
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener('click', function (event) {
+  if (event.target == modal) {
+    modal.querySelector('.modal-content').classList.remove('show');
+    setTimeout(function () {
+      modal.style.display = 'none';
+    }, 500);
+  }
+});

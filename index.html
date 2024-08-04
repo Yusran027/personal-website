@@ -23,6 +23,7 @@
   </head>
   <body>
     <div id="particles-js"></div>
+    <a id="openModalBtn" class="btn-modal"><img src="assets/icons/ceritficate-1.png" alt="" /></a>
     <div class="content-fixed">
       <div class="social-fixed">
         <div class="github">
@@ -67,12 +68,42 @@
         <div class="navbar-content">
           <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#project">project</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#footer">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#galery">Galery</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#skill">Skills</a></li>
           </ul>
         </div>
       </nav>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="container">
+        <div class="modal-content">
+          <div class="title-modal">
+            <span class="close">&times;</span>
+            <h5>Certificate</h5>
+          </div>
+          <div class="body-modal">
+            <div class="carousel">
+              <input type="radio" name="slider" id="item-1" checked />
+              <input type="radio" name="slider" id="item-2" />
+              <input type="radio" name="slider" id="item-3" />
+              <div class="cards-carousel">
+                <label class="certificate" for="item-1" id="certif-1">
+                  <img src="assets/Certificate/Sertifikat KP Untad 2019_1.jpg" alt="certif" />
+                </label>
+                <label class="certificate" for="item-2" id="certif-2">
+                  <img src="assets/Certificate/Sertifikat Seminar Nasional Hello Word 2017_1.jpg" alt="certif" />
+                </label>
+                <label class="certificate" for="item-3" id="certif-3">
+                  <img src="assets/Certificate/yusran-haliq-larisi-certificate-completion-damc_page-0001.jpg" alt="certif" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <section class="hero" id="hero">
       <div class="container">
@@ -86,7 +117,8 @@
             </div>
           </div>
         </div>
-        <h3>My Personal Website</h3>
+        <h3>Welcome to My Personal Website</h3>
+        <p>Junior Frontend | Design Graphic | Video Editor</p>
       </div>
     </section>
     <section class="about" id="about">
@@ -101,7 +133,7 @@
           <img src="assets/img/profil2.jpg" alt="" />
         </div>
         <div class="about-me">
-          <h4>I'm Yusran Haliq</h4>
+          <h4>I'm Yusran Haliq. L</h4>
           <p>
             I am a graduate of Bachelor of Science in Computer Engineering, specializing in Information Technology, with over 1 year of experience in Public Information and Communication. I possess skills in technical problem-solving,
             software and hardware management. I am capable of working independently as well as in a team, with strong communication skills and a high dedication to career development in the field of Information.
@@ -131,11 +163,11 @@
         <div class="row">
           <div class="card" id="card">
             <div class="img-wrapper">
-              <img src="assets/img/1.jpg" alt="" />
+              <img src="assets/img/project-1.png" alt="" />
             </div>
             <div class="name-project">
-              <h6>Project 1</h6>
-              <a href="404.html"><img src="assets/icons/open.svg" alt="Open" /></a>
+              <h6>Portfolio Website</h6>
+              <a href="https://github.com/Yusran027/Portfolio-Purple-Theme"><img src="assets/icons/github-square.svg" alt="Open" /></a>
             </div>
             <p>Lorem ipsum dolor sit ctetur adipi sicing elit. Quidem dolor possimus conse quuntur exercitat ionem sapiente accus antium.</p>
             <div class="item-tool">
@@ -153,7 +185,7 @@
               </div>
             </div>
             <div class="link">
-              <a href="https://yusran027.github.io/Portfolio-Purple-Theme/" target="_blank">Link <span>https://yusran027.github.io/Portfolio-Purple-Theme/</span></a>
+              <a href="https://github.com/Yusran027/Portfolio-Purple-Theme" target="_blank">Link <span>https://github.com/Yusran027/Portfolio-Purple-Theme</span></a>
             </div>
           </div>
           <div class="card" id="card">
@@ -162,7 +194,7 @@
             </div>
             <div class="name-project">
               <h6>Project 2</h6>
-              <a href="404.html"><img src="assets/icons/open.svg" alt="Open" /></a>
+              <a href="404.html"><img src="assets/icons/github-square.svg" alt="Open" /></a>
             </div>
             <p>Lorem ipsum dolor sit amet conseq uuntur exercita tionem sapiente accusantium.</p>
             <div class="item-tool">
@@ -180,7 +212,7 @@
               </div>
             </div>
             <div class="link">
-              <a href="https://yusran027.github.io/Portfolio-Purple-Theme/" target="_blank">Link <span>https://yusran027.github.io/Portfolio-Purple-Theme/</span></a>
+              <a href="" target="_blank">Link <span>Coming Soon...</span></a>
             </div>
           </div>
           <div class="card" id="card">
@@ -189,7 +221,7 @@
             </div>
             <div class="name-project">
               <h6>Project 3</h6>
-              <a href="404.html"><img src="assets/icons/open.svg" alt="Open" /></a>
+              <a href="404.html"><img src="assets/icons/github-square.svg" alt="Open" /></a>
             </div>
             <p>Lorem ipsum doladipisicim dolor possimus conseq uuntur exercit ationem sapiente accusantium.</p>
             <div class="item-tool">
@@ -207,13 +239,13 @@
               </div>
             </div>
             <div class="link">
-              <a href="https://yusran027.github.io/Portfolio-Purple-Theme/" target="_blank">Link <span>https://yusran027.github.io/Portfolio-Purple-Theme/</span></a>
+              <a href="" target="_blank">Link <span>Cooming Soon...</span></a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="galery" id="galery">
+    <section class="galery" id="galery">
       <div class="container">
         <div class="sub-title">
           <span>03.</span>
@@ -239,7 +271,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <section class="career" id="career">
       <div class="container">
         <div class="sub-title">
@@ -262,7 +294,7 @@
               </div>
             </div>
             <div class="logo-inst">
-              <a href="#modal">
+              <a href="404.html">
                 <div class="line">
                   <div class="scanner"></div>
                 </div>
@@ -278,7 +310,7 @@
               <div class="container-card bg-white-box" style="visibility: hidden"></div>
             </div>
             <div class="logo-inst">
-              <a href="#modal">
+              <a href="404.html">
                 <div class="line">
                   <div class="scanner"></div>
                 </div>
@@ -302,7 +334,7 @@
               </div>
             </div>
             <div class="logo-inst">
-              <a href="#modal">
+              <a href="404.html">
                 <div class="line">
                   <div class="scanner"></div>
                 </div>
@@ -432,11 +464,13 @@
         </div>
         <div class="menu">
           <h5>Menu</h5>
-          <a href="#home">Home</a>
-          <a href="#services">My Services</a>
-          <a href="#project">My Project</a>
-          <a href="#about">About Me</a>
-          <a href="#skills">Skills</a>
+          <a href="#home"><li>Home</li></a>
+          <a href="#services"><li>About Me</li></a>
+          <a href="#project"><li>My Project</li></a>
+          <a href="#about"><li>About Me</li></a>
+          <a href="#galery"><li>Galery</li></a>
+          <a href="#career"><li>Career</li></a>
+          <a href="#skills"><li>Skills</li></a>
         </div>
         <div class="contact">
           <h5>Contact</h5>

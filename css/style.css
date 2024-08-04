@@ -75,6 +75,7 @@ span {
 img.bima {
   position: absolute;
   right: 0;
+  margin-top: -8rem;
   width: 35rem; /* Adjust width as needed */
   z-index: 1;
 }
@@ -100,7 +101,7 @@ img.bima {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 10;
   gap: 1rem;
 }
 
@@ -167,7 +168,6 @@ img.bima {
   position: fixed;
   top: 1rem;
   width: 50%;
-  margin-right: 3rem;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(5px);
   border: 1px solid var(--color-border);
@@ -175,7 +175,7 @@ img.bima {
   color: var(--color-text);
   transition: opacity 0.5s;
   opacity: 0;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .navbar-content {
@@ -261,7 +261,195 @@ img.bima {
   }
 }
 
-/* Hero Start */
+/* Modal Sertificate */
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* overflow: auto; */
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s;
+  z-index: 100;
+}
+
+.modal .container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.btn-modal {
+  z-index: 1000;
+  position: fixed;
+  right: 2rem;
+  border-radius: 0;
+  top: 0;
+  cursor: pointer;
+}
+.btn-modal img {
+  width: 4rem;
+}
+.btn-modal img:hover {
+  filter: drop-shadow(0px 0px 0.2rem var(--secondary));
+}
+
+.modal .modal-content {
+  backdrop-filter: blur(30px);
+  padding: 1rem;
+  border: 1px solid #888;
+  height: 38rem;
+  width: 80%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  flex-direction: column;
+}
+
+.modal img {
+  width: 100%;
+  height: 30rem;
+  align-self: center;
+  background-size: cover;
+  /* object-fit: cover; */
+  overflow: hidden;
+}
+
+/* Close button */
+
+.close {
+  color: #aaa;
+  float: right;
+  margin-top: -1rem;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal content visible with animation */
+
+.modal-content.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal .modal-content .title-modal {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.modal .modal-content .title-modal span {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.modal .modal-content .body-modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* certificate */
+.body-modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease-in;
+
+  &.blue {
+    background-color: var(--secondary);
+  }
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.radio-slide {
+  display: flex;
+  gap: 1rem;
+}
+
+.certificate {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.cards-carousel img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards-carousel #certif-3,
+#item-2:checked ~ .cards-carousel #certif-1,
+#item-3:checked ~ .cards-carousel #certif-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards-carousel #certif-2,
+#item-2:checked ~ .cards-carousel #certif-3,
+#item-3:checked ~ .cards-carousel #certif-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards-carousel #certif-1,
+#item-2:checked ~ .cards-carousel #certif-2,
+#item-3:checked ~ .cards-carousel #certif-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+
+  img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
 /* Hero Section */
 .hero {
   display: flex;
@@ -326,7 +514,6 @@ img.bima {
 .hero .container .flip-card-back {
   transform: rotateY(180deg);
 }
-
 
 /* About Section */
 .about {
@@ -444,7 +631,6 @@ img.bima {
   height: 2rem;
 }
 
-
 /* Project Section */
 .project {
   width: 100%;
@@ -516,8 +702,8 @@ img.bima {
 }
 
 .project .row .card .name-project img {
-  height: 1.3rem;
-  width: 1.3rem;
+  height: 1.5rem;
+  width: 1.5rem;
   cursor: pointer;
   filter: brightness(0) invert(1);
   margin-top: 1px;
@@ -594,14 +780,14 @@ img.bima {
 
 /* Galery Section */
 
-.galery{
+.galery {
   width: 100%;
   padding: 5rem 7%;
   display: flex;
   flex-direction: column;
 }
 
-.galery .container{
+.galery .container {
   display: flex;
   flex-direction: column;
   width: auto;
@@ -726,7 +912,6 @@ img.bima {
     margin: 0 0 5px 0;
   }
 }
-
 
 /* Career Section */
 .career .container {
@@ -1005,7 +1190,6 @@ img.bima {
   }
 }
 
-
 /* Footer Section */
 #footer {
   position: relative;
@@ -1054,7 +1238,7 @@ img.bima {
 }
 
 .footer .menu a {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0rem;
 }
 
 .footer .eksplore p {
@@ -1064,8 +1248,8 @@ img.bima {
 }
 
 .footer .eksplore img {
-  height: 5rem;
-  width: 15rem;
+  height: 3.5rem;
+  width: 10rem;
   margin-top: 2rem;
 }
 
@@ -1083,20 +1267,20 @@ img.bima {
 }
 
 .footer .contact img {
-  height: 2rem;
+  height: 1.5rem;
 }
 
 .footer .copyright {
   display: flex;
   position: absolute;
   bottom: 0;
-  font-size: 0.9rem; /* Sesuaikan ukuran font */
+  right: 3rem;
+  font-size: 0.9rem;
 }
 
 .footer .copyright p {
   margin: 0;
 }
-
 
 /* laptop */
 @media (max-width: 1366px) {
