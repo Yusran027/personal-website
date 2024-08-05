@@ -1417,6 +1417,10 @@ input[type='radio'] {
     height: 35rem;
   }
 
+.career{
+  display: none;
+}
+
   .skill .app .tag-list {
     width: 30rem;
   }
