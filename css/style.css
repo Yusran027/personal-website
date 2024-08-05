@@ -1232,9 +1232,9 @@ input[type='radio'] {
 }
 
 /* Footer Section */
-#footer {
+.footer {
   position: relative;
-  height: 30rem;
+  height: 100%;
   width: 100%;
   background-image: url('../assets/img/Footer-aurora-01.gif');
   background-size: cover;
@@ -1354,7 +1354,7 @@ input[type='radio'] {
 
 /* mobile phone */
 @media (max-width: 450px) {
-  html *{
+  html * {
     margin: 0;
     padding: 0;
   }
@@ -1366,17 +1366,77 @@ input[type='radio'] {
     display: none;
   }
 
-  .about .content {
-    flex-direction: column;
-    justify-content: center;
+  .hero .container .flip-card {
+    width: 12rem;
+    height: 12rem;
+    margin-bottom: 3rem;
   }
 
-  .skill .app {
-    width: 60rem;
+  .hero .container .flip-card img {
+    width: 12rem;
+    height: 12rem;
   }
-  .footer {
+
+  .about .content {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about .content .box {
+    height: 25rem;
+    width: 100%;
+  }
+
+  .about .content .box .close-box,
+  .about .content .box img {
+    width: 100%;
+  }
+  .about .content .about-me {
+    width: 100%;
+    text-align: justify;
+  }
+  .project {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .project .container .row {
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .project .container .row .img-wrapper {
+    height: 15rem;
+    padding: 0.5rem;
+  }
+  .project .container .row .img-wrapper img {
+    border-radius: 1rem;
+  }
+  .project .container .row .card {
+    width: 100%;
+    height: 35rem;
+  }
+
+  .skill .app .tag-list {
+    width: 30rem;
+  }
+
+  .footer * {
+    padding: 0;
+    margin: 0;
+  }
+  .footer .row {
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer .row .menu,
+  .footer .row .contact {
     display: none;
   }
+
   .footer .copyright {
     display: block;
   }
