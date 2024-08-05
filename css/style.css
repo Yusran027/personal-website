@@ -1354,7 +1354,11 @@ input[type='radio'] {
 
 /* mobile phone */
 @media (max-width: 450px) {
-  html {
+  html *{
+    margin: 0;
+    padding: 0;
+  }
+  body {
     font-size: 55%;
     padding: 0 7%;
   }
