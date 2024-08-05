@@ -167,7 +167,7 @@ img.bima {
 .navbar {
   position: fixed;
   top: 1rem;
-  width: 50%;
+  width: 50rem;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(5px);
   border: 1px solid var(--color-border);
@@ -1059,6 +1059,12 @@ input[type='radio'] {
   height: auto;
   border: 0;
 }
+/* .career .gradient-cards .card-null {
+  display: flex;
+  width: 25rem;
+  border: 0;
+  visibility: hidden;
+} */
 
 .career .gradient-cards .card .container-card {
   position: relative;
@@ -1156,8 +1162,6 @@ input[type='radio'] {
 
 /* Tools Section */
 .skill .app {
-  min-width: 100vw;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1354,11 +1358,22 @@ input[type='radio'] {
     font-size: 55%;
     padding: 0 7%;
   }
+  .navbar {
+    display: none;
+  }
+
+  .about .content {
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .skill .app {
     width: 60rem;
   }
-  #footer {
-    margin: 0;
+  .footer {
+    display: none;
+  }
+  .footer .copyright {
+    display: block;
   }
 }
