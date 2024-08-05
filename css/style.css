@@ -75,9 +75,9 @@ span {
 img.bima {
   position: absolute;
   right: 0;
-  margin-top: -8rem;
+  margin-top: -25rem;
   width: 35rem; /* Adjust width as needed */
-  z-index: 1;
+  z-index: -1;
 }
 
 /* Sub-Title */
@@ -267,7 +267,6 @@ img.bima {
   position: fixed;
   width: 100%;
   height: 100%;
-  /* overflow: auto; */
   background-color: rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.5s;
   z-index: 100;
@@ -470,8 +469,8 @@ input[type='radio'] {
 
 .hero .container .flip-card {
   background-color: transparent;
-  width: 200px;
-  height: 200px;
+  width: 12rem;
+  height: 12rem;
   perspective: 1000px;
   align-self: center;
   margin-bottom: 2rem;
@@ -504,8 +503,8 @@ input[type='radio'] {
 
 .hero .container .flip-card-front img,
 .hero .container .flip-card-back img {
-  width: 200px;
-  height: 200px;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
   object-fit: cover;
   border: 0.2rem solid var(--color-text);
@@ -1000,7 +999,7 @@ input[type='radio'] {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 30px;
+  padding: 2rem;
   width: 100%;
 }
 
@@ -1059,12 +1058,12 @@ input[type='radio'] {
   height: auto;
   border: 0;
 }
-/* .career .gradient-cards .card-null {
+.career .gradient-cards .card-null {
   display: flex;
   width: 25rem;
   border: 0;
   visibility: hidden;
-} */
+}
 
 .career .gradient-cards .card .container-card {
   position: relative;
@@ -1235,7 +1234,6 @@ input[type='radio'] {
 .footer {
   position: relative;
   height: 100%;
-  width: 100%;
   background-image: url('../assets/img/Footer-aurora-01.gif');
   background-size: cover;
   background-repeat: no-repeat;
@@ -1245,9 +1243,9 @@ input[type='radio'] {
 }
 
 .footer .row {
-  position: absolute;
+  position: relative;
   bottom: 3rem;
-  padding: 0 7%;
+  padding: 10rem 7% 0 7%;
   display: flex;
   width: 100%;
   color: #fff;
@@ -1334,9 +1332,6 @@ input[type='radio'] {
   html {
     font-size: 62.5%;
   }
-  body {
-    /* padding: 0 7%; */
-  }
   .bima {
     margin-top: -10rem;
   }
@@ -1360,12 +1355,54 @@ input[type='radio'] {
   }
   body {
     font-size: 55%;
-    padding: 0 7%;
+    padding: 0 0;
   }
   .navbar {
     display: none;
   }
+  .bima {
+    margin-top: -20rem !important;
+  }
 
+  .modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s;
+    z-index: 100;
+  }
+
+  .modal .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100%;
+    height: 1px;
+  }
+  .modal .modal-content {
+    padding: 1rem;
+    border: 1px solid #888;
+    height: 28rem;
+    width: 90%;
+    align-self: flex-start;
+    justify-content: center;
+    transform: translateY(-200px);
+  }
+
+  .btn-modal img {
+    width: 3rem;
+  }
+
+  .modal img {
+    width: 100%;
+    height: 20rem;
+  }
+
+  .hero {
+    padding: 0 7%;
+  }
   .hero .container .flip-card {
     width: 12rem;
     height: 12rem;
@@ -1375,6 +1412,9 @@ input[type='radio'] {
   .hero .container .flip-card img {
     width: 12rem;
     height: 12rem;
+  }
+  .about {
+    padding: 7rem 7% 0 7%;
   }
 
   .about .content {
@@ -1401,7 +1441,7 @@ input[type='radio'] {
   }
   .project .container .row {
     justify-content: center;
-    padding: 2rem;
+    padding: 3rem;
     width: 100%;
   }
 
@@ -1417,9 +1457,44 @@ input[type='radio'] {
     height: 35rem;
   }
 
-.career{
-  display: none;
-}
+  .galery {
+    padding: 0 7%;
+  }
+
+  /* career */
+  .career .container {
+    padding: 0 7%;
+  }
+  .career .container .sub-title {
+    padding: 0;
+    margin: 2rem 0 0 0;
+  }
+  .career .gradient-cards {
+    gap: 1rem;
+  }
+  .career .gradient-cards .row {
+    flex-direction: column;
+  }
+  .career .gradient-cards .row .container-card {
+    width: 100%;
+    height: 100% !important;
+  }
+
+  .career .gradient-cards .row .card {
+    width: 100%;
+  }
+  .career .gradient-cards .row .logo-inst {
+    display: none;
+  }
+  .career .gradient-cards .row .line {
+    display: none;
+  }
+  .career .gradient-cards .row .intern-job .card .container-card {
+    margin-top: 1rem !important;
+  }
+  .career .gradient-cards .row img {
+    display: none;
+  }
 
   .skill .app .tag-list {
     width: 30rem;
@@ -1432,8 +1507,8 @@ input[type='radio'] {
   .footer .row {
     flex-direction: column;
     position: relative;
-    padding: 0;
-    margin: 0;
+    padding: 0 7%;
+    height: 18rem;
   }
 
   .footer .row .menu,
