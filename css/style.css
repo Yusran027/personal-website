@@ -299,7 +299,7 @@ img.bima {
   padding: 1rem;
   border: 1px solid #888;
   height: 38rem;
-  width: 80%;
+  width: 80%; 
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -321,7 +321,6 @@ img.bima {
   overflow: hidden;
 }
 
-/* Close button */
 
 .close {
   color: #aaa;
@@ -1356,6 +1355,7 @@ input[type='radio'] {
   body {
     font-size: 55%;
     padding: 0 0;
+    overflow: hidden;
   }
   .navbar {
     display: none;
@@ -1402,6 +1402,9 @@ input[type='radio'] {
 
   .hero {
     padding: 0 7%;
+  }
+  .hero .container {
+    padding-bottom: 10rem;
   }
   .hero .container .flip-card {
     width: 12rem;
