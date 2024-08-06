@@ -1444,6 +1444,15 @@ input[type='radio'] {
     align-self: start;
   }
 
+  .galery .container .item {
+    width: 100%;
+    height: 40rem;
+    background-size: cover;
+  }
+  .galery .container .item figcaption {
+    bottom: -40rem;
+  }
+
   .career .gradient-cards .row .intern-job .container-card {
     width: 32rem;
     /* width: 100%; */
@@ -1573,6 +1582,15 @@ input[type='radio'] {
   .galery {
     padding: 0 7%;
   }
+  .galery .container .item {
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+  }
+  .galery .container .item figcaption {
+    bottom: -20rem;
+  }
+  
 
   /* career */
   .career .container {
