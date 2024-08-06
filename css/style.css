@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: 'roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: var(--bg);
   overflow-x: hidden;
   overflow-y: auto;
@@ -58,6 +58,9 @@ h6 {
 p {
   font-size: var(--font-size-p);
   line-height: var(--line-height-p);
+}
+ul {
+  letter-spacing: 0.02rem;
 }
 
 span {
@@ -234,20 +237,17 @@ img.bima {
 #hamburger-menu {
   display: none;
 }
-.navbar .navbar-extra img{
-  height: 2rem;
+.navbar .navbar-extra img {
+  height: 3rem;
   position: fixed;
   right: 2rem;
   top: 1rem;
 }
 
-
 /* Show Navbar */
 .navbar-show {
   opacity: 1;
 }
-
-
 
 /* Neon Text */
 .neonText {
@@ -318,7 +318,7 @@ img.bima {
   padding: 1rem;
   border: 1px solid #888;
   height: 38rem;
-  width: 80%; 
+  width: 80%;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -339,7 +339,6 @@ img.bima {
   /* object-fit: cover; */
   overflow: hidden;
 }
-
 
 .close {
   color: #aaa;
@@ -978,8 +977,8 @@ input[type='radio'] {
   align-self: start;
 }
 
-/* @media queries are commented out in your provided code
-@media screen and (min-width: 992px) and (max-width: 1439px) {
+/* @media queries are commented out in your provided code*/
+/* @media screen and (min-width: 992px) and (max-width: 1439px) {
   .container {
     max-width: 1279px !important;
     padding: 0 !important;
@@ -995,7 +994,7 @@ input[type='radio'] {
     padding: 0 !important;
     width: auto !important;
   }
-} */
+}  */
 
 .career .sub-title {
   margin: 3rem 0;
@@ -1072,13 +1071,13 @@ input[type='radio'] {
 
 .career .gradient-cards .card {
   display: flex;
-  width: 25rem;
+  width: 100%;
   height: auto;
   border: 0;
 }
 .career .gradient-cards .card-null {
   display: flex;
-  width: 25rem;
+  width: 100%;
   border: 0;
   visibility: hidden;
 }
@@ -1090,9 +1089,49 @@ input[type='radio'] {
   background-clip: padding-box;
   border-radius: 1rem;
   padding: 2rem;
-  width: 25rem;
+  width: 100%;
+}
+.career .gradient-cards .card .container-card .job-desc {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.career .gradient-cards .card .container-card .circle {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: #ffffff8a;
+  margin: 0.8rem 0 0.8rem -0.3rem;
+}
+.career .gradient-cards .card .container-card .job-desc .line-card {
+  width: 3px;
+  height: auto;
+  background-color: #ffffff8a;
+}
+.career .gradient-cards .card .container-card .job-desc a {
+  align-items: center;
+  display: flex;
+}
+.career .gradient-cards .card .container-card .job-desc img {
+  height: 2rem;
+  width: auto;
+  margin: 0.5rem 0;
+  border: 0;
 }
 
+.career .gradient-cards .card .container-card .job-desc .portfolio-job {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.career .gradient-cards .card .container-card .job-desc .portfolio-job img {
+  width: 6rem;
+  height: 4rem;
+  border-radius: 0;
+  object-fit: cover;
+  background-size: cover;
+}
 .bg-green-box,
 .bg-white-box,
 .bg-yellow-box,
@@ -1130,29 +1169,37 @@ input[type='radio'] {
   background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
 }
 
-.career .gradient-cards .row .card .container-card h6 {
-  margin: 0 0 0.2rem 0;
-  font-size: 1rem;
+.career .gradient-cards .card .container-card ul {
+  font-size: var(--font-size-p);
+  margin-top: 0.5rem;
+  line-height: var(--line-height-p);
+  list-style-type: none;
 }
 
 .career .gradient-cards .row .card .container-card .time {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 1rem;
 }
+.career .gradient-cards .row .card .container-card h5 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.4rem;
+}
+.career .gradient-cards .row .card .container-card h6 {
+  margin: 0 0 0.2rem 0;
+  font-weight: 400;
+}
 
 .career .gradient-cards .row .card .container-card p {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
-}
-
-.career .gradient-cards .row .card .container-card ul {
-  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  line-height: var(--line-height-p);
 }
 
 .career .gradient-cards .row img {
   width: 3rem;
   height: 3rem;
   margin-top: 2rem;
+  margin: 2rem 1rem 0 1rem;
   border: 2px solid #fff;
   border-radius: 50%;
   align-self: center;
@@ -1168,6 +1215,7 @@ input[type='radio'] {
 .career .gradient-cards .row .intern-job {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* skills start */
@@ -1356,29 +1404,23 @@ input[type='radio'] {
   #hamburger-menu {
     display: inline-block;
   }
-  #hamburger-menu img{
-    border: 2px solid var(--bg);
-    background-color: var(--bg);
-  }
-  
 
-  
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
     background-color: #fff;
     width: 25rem;
-    height: 110vh;
+    height: 100vh;
     transition: 0.3s;
     border-radius: 0;
   }
 
   .navbar .navbar-nav.active {
     right: 0;
-    top: -2rem;
+    top: -1rem;
   }
-  .navbar .nav-links{
+  .navbar .nav-links {
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -1402,13 +1444,12 @@ input[type='radio'] {
     align-self: start;
   }
 
-
-
-  .career .gradient-cards .card-null .container-card{
-    width: 25rem;
+  .career .gradient-cards .row .intern-job .container-card {
+    width: 32rem;
+    /* width: 100%; */
     height: 100%;
   }
-  
+
   .skill .app {
     width: 80rem;
   }
@@ -1431,8 +1472,6 @@ input[type='radio'] {
   .bima {
     margin-top: -20rem !important;
   }
-
-
 
   .modal {
     display: none;
@@ -1462,7 +1501,6 @@ input[type='radio'] {
     width: 100%;
     height: 20rem;
   }
-
 
   /* hero */
   .hero {
@@ -1513,7 +1551,7 @@ input[type='radio'] {
   }
   .project .container .row {
     justify-content: center;
-    padding:0 4.5rem;
+    padding: 0 4.5rem;
     width: 100%;
   }
 
@@ -1529,7 +1567,6 @@ input[type='radio'] {
   .project .container .row .img-wrapper img {
     border-radius: 1rem;
   }
-  
 
   /* galery */
 
@@ -1578,7 +1615,7 @@ input[type='radio'] {
     text-align: start;
     justify-content: start;
   }
-  .skill .app p{
+  .skill .app p {
     align-self: flex-start;
   }
   .skill .app .tag-list {
