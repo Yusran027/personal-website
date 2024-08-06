@@ -167,25 +167,25 @@ img.bima {
 .navbar {
   position: fixed;
   top: 1rem;
-  width: 50rem;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(5px);
-  border: 1px solid var(--color-border);
-  border-radius: 5rem;
+  width: 100%;
   color: var(--color-text);
   transition: opacity 0.5s;
-  opacity: 0;
+  opacity: 1;
   z-index: 20;
 }
 
-.navbar-content {
+.navbar-nav {
   justify-content: space-between;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
+  width: 50%;
   margin: 0 auto;
   padding: 0.6rem;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--color-border);
+  border-radius: 5rem;
 }
 
 /* Navbar Links */
@@ -231,10 +231,23 @@ img.bima {
   background: var(--secondary);
 }
 
+#hamburger-menu {
+  display: none;
+}
+.navbar .navbar-extra img{
+  height: 2rem;
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+}
+
+
 /* Show Navbar */
 .navbar-show {
   opacity: 1;
 }
+
+
 
 /* Neon Text */
 .neonText {
@@ -288,7 +301,7 @@ img.bima {
 .btn-modal {
   z-index: 1000;
   position: fixed;
-  right: 2rem;
+  left: 2rem;
   border-radius: 0;
   top: 0;
   cursor: pointer;
@@ -1340,9 +1353,62 @@ input[type='radio'] {
   .bima {
     margin-top: -10rem;
   }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  #hamburger-menu img{
+    border: 2px solid var(--bg);
+    background-color: var(--bg);
+  }
+  
+
+  
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 25rem;
+    height: 110vh;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+    top: -2rem;
+  }
+  .navbar .nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
   .sub-title {
     align-self: start;
   }
+
+
+
+  .career .gradient-cards .card-null .container-card{
+    width: 25rem;
+    height: 100%;
+  }
+  
   .skill .app {
     width: 80rem;
   }
@@ -1362,12 +1428,11 @@ input[type='radio'] {
     font-size: 55%;
     padding: 0 0;
   }
-  .navbar {
-    display: none;
-  }
   .bima {
     margin-top: -20rem !important;
   }
+
+
 
   .modal {
     display: none;
