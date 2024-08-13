@@ -110,3 +110,58 @@ window.addEventListener('click', function (event) {
     }, 500);
   }
 });
+
+document.querySelector('.view-certificate').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default behavior of the link
+  
+  // Get all radio buttons
+  const radios = document.querySelectorAll('.carousel input[name="slider"]');
+  
+  // Find the checked radio button
+  let activeItem;
+  radios.forEach(radio => {
+      if (radio.checked) {
+          activeItem = radio.id;
+      }
+  });
+  
+  // Map radio button id to the corresponding image
+  const imageMap = {
+      'item-1': document.querySelector('#certif-1 img').src,
+      'item-2': document.querySelector('#certif-2 img').src,
+      'item-3': document.querySelector('#certif-3 img').src,
+      'item-4': document.querySelector('#certif-4 img').src
+  };
+  
+  // Get the src of the active image
+  const imageSrc = imageMap[activeItem];
+  
+  // Open the image in a new tab
+  window.open(imageSrc, '_blank');
+});
+
+const carousel = document.querySelector('.cards-carousel');
+const leftButton = document.querySelector('.nav.left');
+const rightButton = document.querySelector('.nav.right');
+const items = document.querySelectorAll('input[name="slider"]');
+
+let currentIndex = 0;
+
+rightButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    items[currentIndex].checked = true;
+    updateCarouselPosition();
+});
+
+leftButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    items[currentIndex].checked = true;
+    updateCarouselPosition();
+});
+
+function updateCarouselPosition() {
+    const currentRadio = items[currentIndex];
+    const label = document.querySelector(`label[for="${currentRadio.id}"]`);
+    const offset = label.offsetLeft;
+    carousel.scrollTo({ left: offset, behavior: 'smooth' });
+}
