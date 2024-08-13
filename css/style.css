@@ -535,6 +535,16 @@ input[type='radio'] {
   flex-direction: column;
 }
 
+.hero .container span{
+  font-size: var(--font-size-h4);
+  fill: 2px solid #fff;
+}
+
+.hero .container h5{
+  font-weight: 300;
+  color: #ffffff8f;
+}
+
 .hero .container .flip-card {
   background-color: transparent;
   width: 12rem;
