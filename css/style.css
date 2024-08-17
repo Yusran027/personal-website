@@ -1297,7 +1297,6 @@ img.bima {
     transition: all 300ms ease-in-out;
   }
 
-
   img {
     display: block;
     width: 100%;
@@ -1740,9 +1739,47 @@ img.bima {
     }
   }
 
-  .certificate .carousel__slide img {
-    width: 33rem;
+  .certificate .carousel__viewport {
+    overflow: hidden;
   }
+
+  .certificate .carousel__track {
+    display: flex;
+    margin: 0 -1rem; /* Negative margin untuk mengompensasi margin pada slide */
+  }
+
+  .certificate .carousel__slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    white-space: normal;
+    padding: 0 1rem; /* Padding horizontal pada slide */
+    box-sizing: border-box; /* Pastikan padding termasuk dalam lebar total */
+
+    figure {
+      margin: 0;
+    }
+
+    div {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      top: 0;
+      left: 0;
+    }
+
+    figcaption {
+      display: none;
+    }
+  }
+
   .certificate .carousel__thumbnails {
     flex-wrap: wrap;
     gap: 1rem;
