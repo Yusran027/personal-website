@@ -63,3 +63,20 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 }
 
 // fungsi untuk menonaktifkan auto scroll pada ceritificate section
+document.addEventListener('DOMContentLoaded', function() {
+  const thumbnails = document.querySelectorAll('#thumbnail label');
+  let lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  
+  thumbnails.forEach(function(label) {
+    label.addEventListener('click', function(event) {
+      // Simpan posisi scroll saat ini
+      lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Biarkan event click terjadi
+      setTimeout(() => {
+        // Kembalikan ke posisi scroll sebelumnya
+        window.scrollTo(0, lastScrollPosition);
+      }, 0);
+    });
+  });
+});
