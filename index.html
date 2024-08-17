@@ -22,7 +22,6 @@
   </head>
   <body>
     <div id="particles-js"></div>
-    <a id="openModalBtn" class="btn-modal"><img src="assets/icons/ceritficate-1.png" alt="" /></a>
     <div class="content-fixed">
       <div class="social-fixed">
         <div class="github">
@@ -71,6 +70,7 @@
             <a href="#project">Project</a>
             <a href="#galery">Galery</a>
             <a href="#career">Career</a>
+            <a href="#certificate">Certificate</a>
             <a href="#skill">Skills</a>
           </div>
         </div>
@@ -78,41 +78,6 @@
           <a href="#" id="hamburger-menu"><img src="assets/icons/hamburger-menu.svg" alt="" /></a>
         </div>
       </nav>
-    </div>
-    <div id="myModal" class="modal">
-      <div class="container">
-        <div class="modal-content">
-          <div class="title-modal">
-            <span class="close">&times;</span>
-            <h2>My Certificate</h2>
-          </div>
-          <div class="body-modal">
-            <div class="carousel">
-              <button class="nav left">◀️</button>
-              <input type="radio" name="slider" id="item-1" checked style="margin-left: -4rem" />
-              <input type="radio" name="slider" id="item-2" style="margin-left: -2rem" />
-              <input type="radio" name="slider" id="item-3" style="margin-left: 0rem" />
-              <input type="radio" name="slider" id="item-4" style="margin-left: 2rem" />
-              <div class="cards-carousel">
-                <a href="" class="view-certificate">view 👇</a>
-                <label class="certificate" for="item-1" id="certif-1">
-                  <img src="assets/Certificate/JavaScript Masterclass for Beginner to Expert (Bootcamp).jpg" alt="certificate" />
-                </label>
-                <label class="certificate" for="item-2" id="certif-2">
-                  <img src="assets/Certificate/Sertifikat Seminar Nasional Hello Word 2017_1.jpg" alt="certificate" />
-                </label>
-                <label class="certificate" for="item-3" id="certif-3">
-                  <img src="assets/Certificate/yusran-haliq-larisi-certificate-completion-damc_page-0001.jpg" alt="certificate" />
-                </label>
-                <label class="certificate" for="item-4" id="certif-4">
-                  <img src="assets/Certificate/Sertifikat KP Untad 2019_1.jpg" alt="certificate" />
-                </label>
-              </div>
-              <button class="nav right">▶️</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <section class="hero" id="hero">
       <div class="container">
@@ -514,11 +479,106 @@
         </div>
       </div>
     </section>
+    <section class="certificate" id="certificate">
+      <div class="sub-title">
+        <span>05.</span>
+        <h4>My Certificate</h4>
+        <div class="horizontal"></div>
+      </div>
+      <div class="carousel">
+        <input type="radio" name="slides" checked="checked" id="slide-1" />
+        <input type="radio" name="slides" id="slide-2" />
+        <input type="radio" name="slides" id="slide-3" />
+        <input type="radio" name="slides" id="slide-4" />
+        <input type="radio" name="slides" id="slide-5" />
+        <input type="radio" name="slides" id="slide-6" />
+        <ul class="carousel__slides">
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img src="assets/Certificate/JavaScript Masterclass for Beginner to Expert (Bootcamp).jpg" alt="" />
+              </div>
+              <figcaption>
+                <h6>Learn Javascript Programming Language With Practical Interaction.</h6>
+                <p>- Getting Started With Javascript Variables,Values and Data Types, Operators and Operands</p>
+                <p>- Write Javascript scripts and Gain knowledge in regard to general javascript programming concepts</p>
+                <p>- Introduction And Use of Javascript Variables, Javascript Arrays, Javascript Objects</p>
+                <p>- Introduction And Use Of Conditional Statements In Javascript</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img src="assets/Certificate/JavaScript Masterclass for Beginner to Expert (Bootcamp).jpg" alt="" />
+              </div>
+              <figcaption>
+                <h6>Master in JavaScript with Data Visualization, Validations!</h6>
+                <p>- Become an advanced, confident JavaScript developer from scratch</p>
+                <p>- Become job-ready by understanding how JavaScript really works behind the webpage</p>
+                <p>- JavaScript fundamentals: variables, if/else, operators, boolean logic, functions, arrays, objects, strings, control flow loops, etc.</p>
+                <p>- How to think and work like a developer: problem-solving, researching, workflows</p>
+                <p>- Data Visualization: Using Google Charts to create line graph, scatter plots, bar, pie, 3D pie charts, etc.</p>
+                <p>- Client-side Validations: On Submit, input, login form, password strength check, etc.</p>
+                <p>- Error Handling: How to apply try catch finally block coding to handle real-time errors.</p>
+                <p>- ChatGPT + JavaScript basic Calculator program creation idea and apply</p>
+                <p>- learn What is Generative AI for prompt engineering</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img src="assets/Certificate/Sertifikat KP Untad 2019_1.jpg" alt="" />
+              </div>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img src="assets/Certificate/Sertifikat Seminar Nasional Hello Word 2017_1.jpg" alt="" />
+              </div>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img src="assets/Certificate/yusran-haliq-larisi-certificate-completion-damc_page-0001.jpg" alt="" />
+              </div>
+            </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+              <div>
+                <img src="https://picsum.photos/id/1052/800/450" alt="" />
+              </div>
+            </figure>
+          </li>
+        </ul>
+        <ul class="carousel__thumbnails" id="thumbnail">
+          <li>
+            <label for="slide-1"><img src="assets/Certificate/JavaScript Masterclass for Beginner to Expert (Bootcamp).jpg" alt="" /></label>
+          </li>
+          <li>
+            <label for="slide-2"><img src="assets/Certificate/JavaScript Masterclass for Beginner to Expert (Bootcamp).jpg" alt="" /></label>
+          </li>
+          <li>
+            <label for="slide-3"><img src="assets/Certificate/Sertifikat KP Untad 2019_1.jpg" alt="" /></label>
+          </li>
+          <li>
+            <label for="slide-4"><img src="assets/Certificate/Sertifikat Seminar Nasional Hello Word 2017_1.jpg" alt="" /></label>
+          </li>
+          <li>
+            <label for="slide-5"><img src="assets/Certificate/yusran-haliq-larisi-certificate-completion-damc_page-0001.jpg" alt="" /></label>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="skill" id="skill">
       <img class="bima" src="assets/img/bima.png" alt="" />
       <div class="app">
         <div class="sub-title">
-          <span>05.</span>
+          <span>06.</span>
           <h4>My Tools</h4>
           <div class="horizontal"></div>
         </div>
@@ -618,6 +678,7 @@
           <a href="#project"><li>My Project</li></a>
           <a href="#galery"><li>Galery</li></a>
           <a href="#career"><li>Career</li></a>
+          <a href="#certificate"><li>Certificate</li></a>
           <a href="#skill"><li>Skills</li></a>
         </div>
         <div class="contact">
