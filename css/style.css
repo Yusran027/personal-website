@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: 'roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "roboto", "Open Sans", "Helvetica Neue", sans-serif;
   background-color: var(--bg);
   overflow-x: hidden;
   overflow-y: auto;
@@ -218,7 +218,7 @@ img.bima {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -266,7 +266,9 @@ img.bima {
   53%,
   57%,
   100% {
-    text-shadow: 0 0 4px #bc13fe, 0 0 11px var(--secondary), 0 0 19px var(--color-text), 0 0 40px #bc13fe, 0 0 80px #bc13fe, 0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
+    text-shadow: 0 0 4px #bc13fe, 0 0 11px var(--secondary),
+      0 0 19px var(--color-text), 0 0 40px #bc13fe, 0 0 80px #bc13fe,
+      0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
   }
 
   20%,
@@ -509,7 +511,7 @@ img.bima {
 
 .about .content .box::before,
 .about .content .box::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
@@ -598,7 +600,7 @@ img.bima {
   flex-direction: column;
   margin-top: 2rem;
   width: 25rem;
-  height: 35rem;
+  height: 38rem;
   padding: 1.2rem;
   border-radius: 1.2rem;
   backdrop-filter: blur(0.1rem);
@@ -802,7 +804,11 @@ img.bima {
 .galery .container .item figcaption {
   position: absolute;
   bottom: -35rem;
-  background: linear-gradient(to bottom, rgba(3, 2, 5, 0.151), rgb(0, 0, 0)); /* Menggunakan nilai alpha yang lebih tinggi */
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 2, 5, 0.151),
+    rgb(0, 0, 0)
+  ); /* Menggunakan nilai alpha yang lebih tinggi */
   width: 100%;
   height: 100%;
   color: white;
@@ -1076,7 +1082,7 @@ img.bima {
   bottom: -1px;
   left: -1px;
   right: -1px;
-  content: '';
+  content: "";
   z-index: -1;
   border-radius: 1rem;
 }
@@ -1174,22 +1180,34 @@ img.bima {
     padding: 0;
     position: relative;
 
-    &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    &:nth-of-type(6):checked
+      ~ .carousel__slides
+      .carousel__slide:first-of-type {
       margin-left: -500%;
     }
-    &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    &:nth-of-type(5):checked
+      ~ .carousel__slides
+      .carousel__slide:first-of-type {
       margin-left: -400%;
     }
-    &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    &:nth-of-type(4):checked
+      ~ .carousel__slides
+      .carousel__slide:first-of-type {
       margin-left: -300%;
     }
-    &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    &:nth-of-type(3):checked
+      ~ .carousel__slides
+      .carousel__slide:first-of-type {
       margin-left: -200%;
     }
-    &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    &:nth-of-type(2):checked
+      ~ .carousel__slides
+      .carousel__slide:first-of-type {
       margin-left: -100%;
     }
-    &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    &:nth-of-type(1):checked
+      ~ .carousel__slides
+      .carousel__slide:first-of-type {
       margin-left: 0%;
     }
 
@@ -1356,11 +1374,13 @@ img.bima {
   margin-right: 1rem;
   cursor: default;
   transition: box-shadow 600ms;
-  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2),
+    0 0.1rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
 }
 
 .skill .app .loop-slider .tag:hover {
-  box-shadow: 0 0rem 0.8rem rgb(0, 200, 185), 0 0rem 0.8rem rgb(0, 200, 185), 0 0rem 1.4rem rgb(0, 200, 185);
+  box-shadow: 0 0rem 0.8rem rgb(0, 200, 185), 0 0rem 0.8rem rgb(0, 200, 185),
+    0 0rem 1.4rem rgb(0, 200, 185);
 }
 
 .skill .app .loop-slider .tag img {
@@ -1370,7 +1390,13 @@ img.bima {
 
 .skill .app .fade {
   pointer-events: none;
-  background: linear-gradient(90deg, var(--bg), transparent 30%, transparent 70%, var(--bg));
+  background: linear-gradient(
+    90deg,
+    var(--bg),
+    transparent 30%,
+    transparent 70%,
+    var(--bg)
+  );
   position: absolute;
   inset: 0;
 }
@@ -1388,11 +1414,15 @@ img.bima {
 .footer {
   position: relative;
   height: 100%;
-  background-image: url('../assets/img/Footer-aurora-01.gif');
+  background-image: url("../assets/img/Footer-aurora-01.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom; /* Posisikan gambar di tengah dan bawah */
-  -webkit-mask-image: linear-gradient(to top, rgba(4, 16, 32, 1) 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(4, 16, 32, 1) 60%,
+    transparent 100%
+  );
   mask-image: linear-gradient(to top, rgba(4, 16, 32, 1) 60%, transparent 100%);
 }
 
@@ -1661,8 +1691,12 @@ img.bima {
 
   .project .container .row .card {
     width: 100%;
-    height: 35rem;
+    height: auto;
     padding: 1.2rem;
+  }
+  .project .row .card .link {
+    height: 2rem;
+    margin-top: 1rem;
   }
 
   .project .container .row .img-wrapper {
