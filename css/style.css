@@ -33,6 +33,7 @@ body {
   background-color: var(--bg);
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-width: none;
   padding: 0;
 }
 
@@ -68,8 +69,17 @@ span {
   color: var(--secondary);
 }
 
+.splash-button {
+  overflow: visible !important;
+}
+
 /* Common Elements */
-.horizontal {
+.horizontal-about,
+.horizontal-project,
+.horizontal-galery,
+.horizontal-career,
+.horizontal-certificate,
+.horizontal-skill {
   width: 5rem;
   border: 1px solid var(--color-border);
 }
@@ -84,7 +94,12 @@ img.bima {
 }
 
 /* Sub-Title */
-.sub-title {
+.sub-title-about,
+.sub-title-project,
+.sub-title-galery,
+.sub-title-career,
+.sub-title-certificate,
+.sub-title-skill {
   gap: 1rem;
   display: flex;
   align-items: center;
@@ -176,6 +191,7 @@ img.bima {
   transition: opacity 0.5s;
   opacity: 1;
   z-index: 20;
+  transition: transform 0.5s ease;
 }
 
 .navbar-nav {
@@ -183,7 +199,7 @@ img.bima {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 50rem;
   height: 3rem;
   margin: 0 auto;
   padding: 0.6rem;
@@ -199,7 +215,7 @@ img.bima {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .nav-links li {
@@ -208,9 +224,13 @@ img.bima {
 
 .nav-links a {
   color: var(--color-text);
-  font-size: 1rem;
+  font-size: 12px;
   transition: all 0.3s ease;
   position: relative;
+  display: inline-block;
+  text-align: center;
+  line-height: 1; /* Menghapus ruang kosong di bawah teks */
+  padding: 0;
 }
 
 .nav-links a:hover {
@@ -234,6 +254,14 @@ img.bima {
   width: 100%;
   left: 0;
   background: var(--secondary);
+}
+
+.nav-links a.active {
+  position: relative;
+  color: var(--secondary);
+  align-items: center;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 #hamburger-menu {
@@ -488,10 +516,10 @@ img.bima {
   background: #060c21;
 }
 
-.about .content .box .sub-title {
+.about .content .box .sub-title-about {
   position: absolute;
   top: -5rem;
-  z-index: 1;
+  z-index: 11;
 }
 
 .about .content .box img {
@@ -555,8 +583,12 @@ img.bima {
   margin: 2rem 0;
 }
 
-.about .content .about-me p {
+.about .content .about-me .animated-paragraph {
   margin-bottom: 2rem;
+}
+.about .content .about-me .animated-paragraph span {
+  opacity: 0.15;
+  color: #fff;
 }
 
 .about .content .about-me .email-container,
@@ -582,9 +614,31 @@ img.bima {
   width: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 5rem 7%;
+}
+.project .text {
+  text-align: left;
+}
+
+.project-btn {
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
+}
+.project-btn .splash-button.btn {
+  height: 2rem;
+  width: 8rem;
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+.project-btn .splash-button.btn.active {
+  box-shadow: 0px 0px 10px var(--secondary);
+}
+.project-btn .splash-button.btn.disable {
+  opacity: 0.5;
 }
 
 .project .row {
@@ -600,7 +654,7 @@ img.bima {
   flex-direction: column;
   margin-top: 2rem;
   width: 25rem;
-  height: 38rem;
+  height: auto;
   padding: 1.2rem;
   border-radius: 1.2rem;
   backdrop-filter: blur(0.1rem);
@@ -666,6 +720,7 @@ img.bima {
 .project .row .card .item-tool {
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 
@@ -722,6 +777,36 @@ img.bima {
 .project .row .card .link span {
   color: var(--secondary);
   font-size: 0.8rem;
+}
+
+.project .my-tech {
+  margin: 3rem 0 0rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.project .my-tech .tech-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 2rem;
+}
+.project .my-tech .tech-container img {
+  height: 3rem;
+  width: auto;
+  opacity: 0.5;
+  filter: grayscale(80%);
+  transition: all 300ms ease;
+}
+.project .my-tech .tech-container img:hover {
+  height: 3rem;
+  width: auto;
+  opacity: 1;
+  filter: grayscale(0%);
+  scale: 1.1 !important;
 }
 
 /* Galery Section */
@@ -1016,6 +1101,14 @@ img.bima {
   visibility: hidden;
 }
 
+.career .gradient-cards .row .intern-job {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
 .career .gradient-cards .card .container-card {
   position: relative;
   border: 2px solid transparent;
@@ -1146,16 +1239,10 @@ img.bima {
   box-shadow: 0 0 12px #00c8b9;
 }
 
-.career .gradient-cards .row .intern-job {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 /* certificate */
 .certificate {
   width: 100%;
-  padding: 0 7%;
+  padding: 2rem 7%;
   margin: 5rem 0;
 }
 
@@ -1521,6 +1608,7 @@ img.bima {
   }
   #hamburger-menu {
     display: inline-block;
+    position: fixed;
   }
 
   .navbar .navbar-nav {
@@ -1572,8 +1660,6 @@ img.bima {
   }
 
   .career .gradient-cards .row .intern-job .container-card {
-    width: 32rem;
-    /* width: 100%; */
     height: 100%;
   }
 
@@ -1705,7 +1791,12 @@ img.bima {
   .project .container .row .img-wrapper img {
     border-radius: 1rem;
   }
-
+  .project .my-tech .tech-container {
+    gap: 1rem;
+  }
+  .project .my-tech .tech-container img {
+    height: 2rem;
+  }
   /* galery */
 
   .galery {

@@ -1,47 +1,66 @@
-// Navbar-fungsi cadangan
-
 // Fungsi untuk menentukan apakah scroll ke atas atau ke bawah
-// Ambil elemen navbar
-// var navbar = document.getElementById('navbar');
-// var lastScrollTop = 0;
-// window.addEventListener('scroll', function () {
-//   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+var navbar = document.getElementById("navbar");
+var lastScrollTop = 0;
+var scrollDelta = 5;
+var navbarHeight = navbar.offsetHeight;
 
-//   if (scrollTop > lastScrollTop) {
+window.addEventListener("scroll", function () {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-//     navbar.classList.remove('navbar-show');
-//   } else {
+  // Periksa jika scrolling cukup besar untuk animasi
+  if (Math.abs(lastScrollTop - scrollTop) <= scrollDelta) {
+    return;
+  }
 
-//     navbar.classList.add('navbar-show');
-//   }
+  if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+    // Scroll ke bawah, sembunyikan navbar
+    navbar.style.transform = "translateY(-200%)";
+  } else if (scrollTop < lastScrollTop) {
+    // Scroll ke atas, tampilkan navbar
+    navbar.style.transform = "translateY(0)";
+  }
 
-//   lastScrollTop = scrollTop;
-// });
+  lastScrollTop = scrollTop;
+});
 
-//Toggle Class Active untuk hamburger menu
+// Navbar Active
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const sections = document.querySelectorAll("section");
 
-const navbarNav = document.querySelector('.navbar-nav');
-// ketika hamburger diklik
+  window.addEventListener("scroll", () => {
+    let current = "";
 
-document.querySelector('#hamburger-menu').onclick = (e) => {
-  navbarNav.classList.toggle('active');
-  e.preventDefault(); // Hanya diperlukan jika Anda ingin menghentikan perilaku default dari tombol pencarian
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 50) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  });
+});
+
+//Hamburger menu
+const navbarNav = document.querySelector(".navbar-nav");
+
+document.querySelector("#hamburger-menu").onclick = (e) => {
+  navbarNav.classList.toggle("active");
+  e.preventDefault();
 };
 
 // klik diluar sidebar untuk menghilangkan nav
-const hm = document.querySelector('#hamburger-menu');
-const sb = document.querySelector('#search-button');
-const scb = document.querySelector('#shopping-cart-button');
+const hm = document.querySelector("#hamburger-menu");
 
-document.addEventListener('click', function (e) {
+document.addEventListener("click", function (e) {
   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove('active');
-  }
-  if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
-    searchForm.classList.remove('active');
-  }
-  if (!scb.contains(e.target) && !searchForm.contains(e.target)) {
-    shoppingCart.classList.remove('active');
+    navbarNav.classList.remove("active");
   }
 });
 
@@ -49,29 +68,31 @@ document.addEventListener('click', function (e) {
 var animateButton = function (e) {
   e.preventDefault;
   //reset animation
-  e.target.classList.remove('animate');
+  e.target.classList.remove("animate");
 
-  e.target.classList.add('animate');
+  e.target.classList.add("animate");
   setTimeout(function () {
-    e.target.classList.remove('animate');
+    e.target.classList.remove("animate");
   }, 700);
 };
 
-var bubblyButtons = document.getElementsByClassName('splash-button');
+var bubblyButtons = document.getElementsByClassName("splash-button");
 for (var i = 0; i < bubblyButtons.length; i++) {
-  bubblyButtons[i].addEventListener('click', animateButton, false);
+  bubblyButtons[i].addEventListener("click", animateButton, false);
 }
 
 // fungsi untuk menonaktifkan auto scroll pada ceritificate section
-document.addEventListener('DOMContentLoaded', function() {
-  const thumbnails = document.querySelectorAll('#thumbnail label');
-  let lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-  
-  thumbnails.forEach(function(label) {
-    label.addEventListener('click', function(event) {
+document.addEventListener("DOMContentLoaded", function () {
+  const thumbnails = document.querySelectorAll("#thumbnail label");
+  let lastScrollPosition =
+    window.pageYOffset || document.documentElement.scrollTop;
+
+  thumbnails.forEach(function (label) {
+    label.addEventListener("click", function (event) {
       // Simpan posisi scroll saat ini
-      lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-      
+      lastScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
+
       // Biarkan event click terjadi
       setTimeout(() => {
         // Kembalikan ke posisi scroll sebelumnya

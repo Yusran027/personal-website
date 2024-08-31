@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/komponen.css" />
     <link rel="stylesheet" href="css/bg_glow.css" />
+
     <style>
       #particles-js {
         position: absolute;
@@ -130,25 +131,25 @@
             </div>
           </div>
         </div>
-        <h4>Hallo, I'am <span> Yusran Haliq Larisi</span></h4>
-        <h2>Welcome to My Personal Website</h2>
+        <!-- <h4>Hallo, I'am <span> Yusran Haliq Larisi</span></h4> -->
+        <h2 class="typing-text">Welcome to My Personal Website</h2>
         <h5>Junior Frontend | Design Graphic | Video Editor</h5>
       </div>
     </section>
     <section class="about" id="about">
       <div class="content">
         <div class="box">
-          <div class="sub-title">
+          <div class="sub-title-about">
             <span>01.</span>
             <h4>About Me</h4>
-            <div class="horizontal"></div>
+            <div class="horizontal-about"></div>
           </div>
           <div class="close-box"></div>
           <img src="assets/img/profil2.jpg" alt="" />
         </div>
         <div class="about-me">
           <h4>I'm Yusran Haliq. L</h4>
-          <p>
+          <p class="animated-paragraph">
             I am a graduate of Bachelor of Science in Computer Engineering,
             specializing in Information Technology, with over 1 year of
             experience in Public Information and Communication. I possess skills
@@ -181,14 +182,19 @@
           </a>
         </div>
       </div>
-    </section>
-    <section class="project" id="project">
+    </section><section class="project" id="project">
       <div class="container">
         <div class="blob"></div>
-        <div class="sub-title">
+        <div class="sub-title-project">
           <span>02.</span>
           <h4>My Projects</h4>
-          <div class="horizontal"></div>
+          <div class="horizontal-project"></div>
+        </div>
+        <p class="text">This is a list of my projects to date.</p>
+        <div class="project-btn">
+          <button class="splash-button btn active">Website</button>
+          <button class="splash-button btn disable">Design Graphic</button>
+          <button class="splash-button btn disable">Video Editing</button>
         </div>
         <div class="row">
           <div class="card" id="card">
@@ -304,15 +310,28 @@
           </div>
         </div>
       </div>
+      <div class="my-tech">
+        <h5>"Technologies I use to build websites."</h5>
+        <div class="tech-container">
+          <div class="tech-tool"><img src="assets/logo/Javascript.png" alt=""></div>
+          <div class="tech-tool"><img src="assets/logo/Gsap.png" alt=""></div>
+          <div class="tech-tool"><img src="assets/logo/Html.png" alt=""></div>
+          <div class="tech-tool"><img src="assets/logo/Tailwind.png" alt=""></div>
+          <div class="tech-tool"><img src="assets/logo/Mysql_logo.png" alt=""></div>
+          <div class="tech-tool"><img src="assets/logo/css.png" alt=""></div>
+          <div class="tech-tool"><img src="assets/logo/PHP-logo.svg.png" alt=""></div>
+          <div class="tech-tool"><img src="assets/logo/icons8-bootstrap-50.png" alt=""></div>
+        </div>
+      </div>
     </section>
     <section class="galery" id="galery">
       <div class="container">
-        <div class="sub-title">
+        <div class="sub-title-galery">
           <span>03.</span>
           <h4>Galery</h4>
-          <div class="horizontal"></div>
+          <div class="horizontal-galery"></div>
         </div>
-        <p>An Overview of My Professional Career in Documentation to Date</p>
+        <p>An Overview of My Professional Career in Documentation to Date.</p>
         <div class="responsive-container-block bg">
           <div class="responsive-container-block img-cont">
             <figure class="item">
@@ -407,14 +426,15 @@
     </section>
     <section class="career" id="career">
       <div class="container">
-        <div class="sub-title">
+        <div class="sub-title-career">
           <span>04.</span>
           <h4>My Career Journey</h4>
-          <div class="horizontal"></div>
+          <div class="horizontal-career"></div>
         </div>
+        <p class="text">This is my career journey to date.</p>
         <div class="gradient-cards">
           <div class="row">
-            <div class="card">
+            <div class="card left_1">
               <div class="container-card bg-green-box">
                 <h5>Freelancer</h5>
                 <p>Luwuk, Central Sulawesi</p>
@@ -423,9 +443,9 @@
                 <div class="job-desc">
                   <div class="line-card"></div>
                   <div class="deskripsi">
-                    <h6>Junior Frontend</h6>
-                    <h6>Graphic Design</h6>
-                    <h6>Video Editor</h6>
+                    <h6>- Junior Frontend</h6>
+                    <h6>- Graphic Design</h6>
+                    <h6>- Video Editor</h6>
                     <!-- <a><img src="assets/icons/diamond-30.png" alt=""> &nbsp;5+ Skills </a>  -->
                   </div>
                 </div>
@@ -461,7 +481,7 @@
                 <img src="assets/logo/logo kominfo-01.jpg" alt="" />
               </a>
             </div>
-            <div class="card">
+            <div class="card right_1">
               <div class="container-card bg-white-box">
                 <h5>
                   Dinas Komunikasi, Informatika, Statistik dan Persandian
@@ -548,11 +568,8 @@
             </div>
           </div>
           <div class="row">
-            <div class="card">
-              <div
-                class="container-card bg-yellow-box"
-                style="height: 55rem; width: 100%"
-              >
+            <div class="card left_2">
+              <div class="container-card bg-yellow-box" style="height: 55rem">
                 <h5>Tadulako University</h5>
                 <p class="time">1 August 2017 - 22 February 2022</p>
                 <p>Palu, Central Sulawesi</p>
@@ -571,9 +588,7 @@
                       </li>
                     </ul>
                     <a
-                      ><img src="assets/icons/diamond-30.png" alt="" />
-                      &nbsp;Link Project:&nbsp;
-                      <p>https://ppdbuntadta.000webhostapp.com/</p>
+                      ><img src="assets/icons/diamond-30.png" alt="" />5+ Skills
                     </a>
                     <div class="portfolio-job">
                       <a href="https://ppdbuntadta.000webhostapp.com/"
@@ -602,7 +617,7 @@
                 />
               </a>
             </div>
-            <div class="intern-job">
+            <div class="intern-job right_2">
               <div class="card">
                 <div
                   class="container-card bg-blue-box"
@@ -672,10 +687,10 @@
       </div>
     </section>
     <section class="certificate" id="certificate">
-      <div class="sub-title">
+      <div class="sub-title-certificate">
         <span>05.</span>
         <h4>My Certificate</h4>
-        <div class="horizontal"></div>
+        <div class="horizontal-certificate"></div>
       </div>
       <div class="carousel">
         <input type="radio" name="slides" checked="checked" id="slide-1" />
@@ -807,7 +822,7 @@
           <li>
             <label for="slide-1"
               ><img
-                src="assets/Certificate/JavaScript Masterclass for Beginner to Expert (Bootcamp).jpg"
+                src="assets/Certificate/Javascript For Beginners Complete Course.jpg"
                 alt=""
             /></label>
           </li>
@@ -839,16 +854,30 @@
                 alt=""
             /></label>
           </li>
+          <li>
+            <label for="slide-1"
+              ><img
+                src="assets/Certificate/Javascript For Beginners Complete Course.jpg"
+                alt=""
+            /></label>
+          </li>
+          <li>
+            <label for="slide-1"
+              ><img
+                src="assets/Certificate/Javascript For Beginners Complete Course.jpg"
+                alt=""
+            /></label>
+          </li>
         </ul>
       </div>
     </section>
     <section class="skill" id="skill">
       <img class="bima" src="assets/img/bima.png" alt="" />
       <div class="app">
-        <div class="sub-title">
+        <div class="sub-title-skill">
           <span>06.</span>
           <h4>My Tools</h4>
-          <div class="horizontal"></div>
+          <div class="horizontal-skill"></div>
         </div>
         <p>Tools that I use in my work</p>
         <div class="tag-list">
@@ -1110,8 +1139,21 @@
         <p>&copy; 2024 YHL. All rights reserved.</p>
       </div>
     </footer>
-    <script src="js/particles.js" defer></script>
+    <script src="js/particles.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="js/animations.js" defer></script>
     <script src="js/app.js" defer></script>
     <script src="js/script.js" defer></script>
+
+    <script>
+      // Simple GSAP animation for .tech-tool img elements
+    </script>
   </body>
 </html>
