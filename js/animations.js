@@ -146,18 +146,18 @@ gsap.utils.toArray(".card").forEach((card) => {
 });
 
 // Logo Technologi website
-gsap.from(".tech-tool img", {
+gsap.from(".tech-tool", {
   duration: 1,
   y: 50,
   stagger: 0.2,
   ease: "power2.out",
   scrollTrigger: {
-    trigger: ".project",
-    start: "top 60%",
-    end: "bottom 50%",
-    scrub: true,
+    trigger: ".galery",
+    start: "top 100% ",
+    once: true,
   },
 });
+
 // Galery Section Start
 gsap.from(".sub-title-galery", {
   opacity: 0,

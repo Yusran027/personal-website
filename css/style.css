@@ -108,7 +108,7 @@ img.bima {
 /* Fixed Content */
 .content-fixed {
   display: flex;
-  justify-content: center; /* Rata tengah secara horizontal */
+  justify-content: center;
 }
 
 /* Social and Email Fixed */
@@ -621,12 +621,15 @@ img.bima {
 }
 .project .text {
   text-align: left;
+  width: 100%;
+  padding: 0 2.8rem;
 }
 
 .project-btn {
   display: flex;
   justify-content: start;
   gap: 0.5rem;
+  padding: 0 2.8rem;
 }
 .project-btn .splash-button.btn {
   height: 2rem;
@@ -823,14 +826,20 @@ img.bima {
   flex-direction: column;
   width: auto;
 }
+.galery .container .text {
+  width: 100%;
+  padding: 0 2.8rem;
+}
+
+.galery .container .img-container {
+  width: 100%;
+  padding: 0 1rem;
+}
 .galery .responsive-container-block {
   min-height: 75px;
   height: fit-content;
   width: 100%;
-  padding-top: 0.8rem;
-  padding-right: 0.8rem;
-  padding-bottom: 0.8rem;
-  padding-left: 0.8rem;
+  padding: 0.8rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -996,27 +1005,8 @@ img.bima {
   align-self: start;
 }
 
-/* @media queries are commented out in your provided code*/
-/* @media screen and (min-width: 992px) and (max-width: 1439px) {
-  .container {
-    max-width: 1279px !important;
-    padding: 0 !important;
-    margin: 0 80px !important;
-    width: auto !important;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .container {
-    max-width: 959px !important;
-    margin: 0 16px !important;
-    padding: 0 !important;
-    width: auto !important;
-  }
-}  */
-
-.career .sub-title {
-  margin: 3rem 0;
+.career .sub-title-career {
+  margin: 3rem 0 0 0;
 }
 
 @keyframes scanner-loop {
@@ -1038,13 +1028,6 @@ img.bima {
   padding: 2rem;
   width: 100%;
 }
-
-/* @media queries are commented out in your provided code
-@media screen and (max-width: 991px) {
-  .gradient-cards {
-    grid-template-columns: 1fr;
-  }
-} */
 
 .career .gradient-cards .row {
   display: flex;
@@ -1249,13 +1232,13 @@ img.bima {
 .certificate .container {
   max-width: 1044px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .certificate .carousel {
   display: block;
   text-align: left;
   position: relative;
+  padding: 0 2.8rem;
 
   > input {
     clip: rect(1px, 1px, 1px, 1px);
@@ -1646,7 +1629,12 @@ img.bima {
     transform: scaleX(0.2);
   }
 
-  .sub-title {
+  .sub-title-about,
+  .sub-title-project,
+  .sub-title-galery,
+  .sub-title-career,
+  .sub-title-certificate,
+  .sub-title-skill {
     align-self: start;
   }
 
@@ -1662,9 +1650,24 @@ img.bima {
   .career .gradient-cards .row .intern-job .container-card {
     height: 100%;
   }
+  .certificate .carousel__slides img {
+    width: 100%;
+  }
 
+  .certificate .carousel__slides figcaption {
+    display: none;
+  }
+
+  .certificate .carousel__thumbnails li img {
+    height: 5rem;
+  }
   .skill .app {
     width: 80rem;
+  }
+  .skill .app .text {
+    width: 100%;
+    text-align: left;
+    padding: 0 2.8rem;
   }
   #footer {
     padding: 0;
@@ -1753,6 +1756,10 @@ img.bima {
     height: 25rem;
     width: 100%;
   }
+  .about .content .profil-about {
+    padding: 0 2.2rem;
+    width: 100%;
+  }
 
   .about .content .box .close-box,
   .about .content .box img {
@@ -1761,6 +1768,7 @@ img.bima {
   .about .content .about-me {
     width: 100%;
     text-align: justify;
+    padding: 0 2.2rem;
   }
 
   /* Project */
@@ -1771,8 +1779,12 @@ img.bima {
   }
   .project .container .row {
     justify-content: center;
-    padding: 0 4.5rem;
     width: 100%;
+    padding: 0 2.2rem;
+  }
+  .project .container .project-btn {
+    width: 100%;
+    padding: 0 2.2rem;
   }
 
   .project .container .row .card {
@@ -1793,6 +1805,7 @@ img.bima {
   }
   .project .my-tech .tech-container {
     gap: 1rem;
+    width: 100%;
   }
   .project .my-tech .tech-container img {
     height: 2rem;
@@ -1815,8 +1828,15 @@ img.bima {
   .career .container {
     padding: 0 7%;
   }
-  .career .container .sub-title {
+  .career .container p.text {
+    height: 2rem;
+    padding: 0 2.2rem;
+    width: 100%;
+    text-align: start;
+  }
+  .career .container .sub-title-career {
     padding: 0;
+    justify-content: start;
     margin: 2rem 0 0 0;
   }
   .career .gradient-cards {
@@ -1852,6 +1872,7 @@ img.bima {
   }
 
   .certificate .carousel {
+    padding: 0 2.1rem;
     > input:checked {
       &:nth-of-type(1) ~ .carousel__thumbnails li:nth-of-type(1),
       &:nth-of-type(2) ~ .carousel__thumbnails li:nth-of-type(2),
@@ -1870,16 +1891,15 @@ img.bima {
 
   .certificate .carousel__track {
     display: flex;
-    margin: 0 -1rem; /* Negative margin untuk mengompensasi margin pada slide */
+    margin: 0 -1rem;
   }
 
   .certificate .carousel__slide {
     flex: 0 0 100%;
     max-width: 100%;
     white-space: normal;
-    padding: 0 1rem; /* Padding horizontal pada slide */
-    box-sizing: border-box; /* Pastikan padding termasuk dalam lebar total */
-
+    padding: 0 1rem;
+    box-sizing: border-box;
     figure {
       margin: 0;
     }
@@ -1907,11 +1927,14 @@ img.bima {
 
   .certificate .carousel__thumbnails {
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
+    padding: 0 0 0 1rem;
   }
   .certificate .carousel__thumbnails img {
     height: 4.5rem;
     width: 6rem;
+    padding: 0;
+    margin: 0 !important;
   }
 
   /* skill */
@@ -1920,8 +1943,9 @@ img.bima {
     text-align: start;
     justify-content: start;
   }
-  .skill .app p {
-    align-self: flex-start;
+  .skill .app .text {
+    width: 100%;
+    padding: 0 2.2rem;
   }
   .skill .app .tag-list {
     width: 30rem;
