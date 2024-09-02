@@ -283,7 +283,9 @@ img.bima {
 .neonText {
   animation: flicker 1.5s infinite alternate;
   color: var(--color-text);
+  will-change: text-shadow;
 }
+
 
 /* Flickering Animation */
 @keyframes flicker {
@@ -294,9 +296,7 @@ img.bima {
   53%,
   57%,
   100% {
-    text-shadow: 0 0 4px #bc13fe, 0 0 11px var(--secondary),
-      0 0 19px var(--color-text), 0 0 40px #bc13fe, 0 0 80px #bc13fe,
-      0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
+    text-shadow: 0 0 4px #bc13fe, 0 0 11px var(--secondary), 0 0 19px #bc13fe;
   }
 
   20%,
