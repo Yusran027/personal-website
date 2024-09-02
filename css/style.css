@@ -1756,6 +1756,9 @@ img.bima {
     height: 25rem;
     width: 100%;
   }
+  .about .content .box .sub-title-about {
+    margin-left: -3rem;
+  }
   .about .content .profil-about {
     padding: 0 2.2rem;
     width: 100%;

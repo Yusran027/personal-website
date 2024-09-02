@@ -298,3 +298,26 @@ gsap.from(".career .gradient-cards .intern-job.right_2", {
     start: "top 80%",
   },
 });
+
+// Certificate Section start
+gsap.from(".sub-title-certificate", {
+  opacity: 0,
+  x: -150,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".certificate",
+    start: "top 80%",
+  },
+});
+
+gsap.from(".horizontal-certificate", {
+  scaleX: 0,
+  transformOrigin: "left center",
+  duration: 1,
+  delay: 0.5,
+  scrollTrigger: {
+    trigger: ".certificate",
+    start: "top 80%",
+  },
+});
+  
