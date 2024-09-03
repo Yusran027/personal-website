@@ -98,20 +98,105 @@ gsap.from(".project .text", {
     start: "top 80%",
   },
 });
-// Animate the cards
-gsap.utils.toArray(".card").forEach((card, index) => {
-  gsap.to(card, {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    delay: 0.8 * index,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: card,
-      start: "top 70%",
+
+const cardsPerPage = 3;
+const dataContainer = document.querySelector(".project .row");
+const pagination = document.getElementById("pagination");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+const pageNumbers = document.getElementById("page-numbers");
+const pageLinks = document.querySelectorAll(".page-link");
+
+const cards = Array.from(dataContainer.getElementsByClassName("card"));
+const totalPages = Math.ceil(cards.length / cardsPerPage);
+let currentPage = 1;
+
+function displayPage(page, direction) {
+  const startIndex = (page - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+
+  gsap.to(cards, {
+    duration: 0.5,
+    opacity: 0,
+    x: direction === "next" ? -100 : 100,
+    stagger: 0.05,
+    onComplete: () => {
+      cards.forEach((card, index) => {
+        if (index >= startIndex && index < endIndex) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      gsap.fromTo(
+        cards.slice(startIndex, endIndex),
+        { opacity: 0, x: direction === "next" ? 100 : -100 },
+        { duration: 0.5, opacity: 1, x: 0, stagger: 0.05 }
+      );
     },
   });
+}
+
+// fungsi animasi pagination
+
+function updatePagination() {
+  pageNumbers.textContent = `Page ${currentPage} of ${totalPages}`;
+  prevButton.disabled = currentPage === 1;
+  nextButton.disabled = currentPage === totalPages;
+  pageLinks.forEach((link) => {
+    const page = parseInt(link.getAttribute("data-page"));
+    link.classList.toggle("active", page === currentPage);
+  });
+}
+
+prevButton.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    displayPage(currentPage, "prev");
+    updatePagination();
+  }
 });
+
+nextButton.addEventListener("click", () => {
+  if (currentPage < totalPages) {
+    currentPage++;
+    displayPage(currentPage, "next");
+    updatePagination();
+  }
+});
+
+pageLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const page = parseInt(link.getAttribute("data-page"));
+    if (page !== currentPage) {
+      const direction = page > currentPage ? "next" : "prev";
+      currentPage = page;
+      displayPage(currentPage, direction);
+      updatePagination();
+    }
+  });
+});
+
+// Initial page load
+displayPage(currentPage, "next");
+updatePagination();
+
+// Animate the cards
+// gsap.utils.toArray(".card").forEach((card, index) => {
+//   gsap.to(card, {
+//     opacity: 1,
+//     y: 0,
+//     duration: 1,
+//     delay: 0.8 * index,
+//     ease: "power3.out",
+//     scrollTrigger: {
+//       trigger: card,
+//       start: "top 70%",
+//     },
+//   });
+// });
 
 // Animate the tools
 gsap.utils.toArray(".tool").forEach((tool) => {
@@ -152,8 +237,8 @@ gsap.from(".tech-tool", {
   stagger: 0.2,
   ease: "power2.out",
   scrollTrigger: {
-    trigger: ".galery",
-    start: "top 100% ",
+    trigger: ".project",
+    buttom: "80&",
     once: true,
   },
 });
@@ -320,4 +405,3 @@ gsap.from(".horizontal-certificate", {
     start: "top 80%",
   },
 });
-  

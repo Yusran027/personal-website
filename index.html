@@ -193,14 +193,44 @@
           <h4>My Projects</h4>
           <div class="horizontal-project"></div>
         </div>
-        <p class="text">This is a list of my projects to date.</p>
-        <div class="project-btn">
+        <!-- <p class="text">This is a list of my projects to date.</p> -->
+        <!-- <div class="project-btn">
           <button class="splash-button btn active">Website</button>
           <button class="splash-button btn disable">Design Graphic</button>
           <button class="splash-button btn disable">Video Editing</button>
+        </div> -->
+
+        <div class="my-tech">
+          <h6>"Technologies I use to build websites."</h6>
+          <div class="tech-container">
+            <div class="tech-tool">
+              <img src="assets/logo/Javascript.png" alt="" />
+            </div>
+            <div class="tech-tool">
+              <img src="assets/logo/Gsap.png" alt="" />
+            </div>
+            <div class="tech-tool">
+              <img src="assets/logo/Html.png" alt="" />
+            </div>
+            <div class="tech-tool">
+              <img src="assets/logo/Tailwind.png" alt="" />
+            </div>
+            <div class="tech-tool">
+              <img src="assets/logo/Mysql_logo.png" alt="" />
+            </div>
+            <div class="tech-tool">
+              <img src="assets/logo/css.png" alt="" />
+            </div>
+            <div class="tech-tool">
+              <img src="assets/logo/PHP-logo.png" alt="" />
+            </div>
+            <div class="tech-tool">
+              <img src="assets/logo/icons8-bootstrap-50.png" alt="" />
+            </div>
+          </div>
         </div>
         <div class="row">
-          <div class="card" id="card">
+          <div class="card">
             <div class="img-wrapper">
               <img src="assets/project/project-portfolio-ungu.jpg" alt="" />
             </div>
@@ -323,29 +353,94 @@
               >
             </div>
           </div>
+          <div class="card">
+            <div class="img-wrapper">
+              <img src="assets/project/project3.jpg" alt="" />
+            </div>
+            <div class="name-project">
+              <h6>Game_Batu_Gunting_Kertas</h6>
+              <a href="https://github.com/Yusran027/Game_Batu_Gunting_Kertas">
+                <img src="assets/icons/github-square.svg" alt="Open" />
+              </a>
+            </div>
+            <p>
+              This is a "Rock, Paper, Scissors" game, a classic game where
+              players choose between rock, paper, or scissors to compete against
+              the computer's choice. The game is built using standard web
+              technologies HTML, CSS and Javascript.
+            </p>
+            <div class="item-tool">
+              <div class="tool">
+                <img src="assets/logo/Html.png" alt="" />
+                <p>HTML5</p>
+              </div>
+              <div class="tool">
+                <img src="assets/logo/css.png" alt="" />
+                <p>CSS3</p>
+              </div>
+              <div class="tool">
+                <img src="assets/logo/Javascript.png" alt="" />
+                <p>Javascript</p>
+              </div>
+            </div>
+            <div class="link">
+              <a
+                href="https://yusran027.github.io/Game_Batu_Gunting_Kertas/"
+                target="_blank"
+                >Link
+                <span
+                  >https://yusran027.github.io/Game_Batu_Gunting_Kertas/</span
+                ></a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrapper">
+              <img src="assets/project/tebak_angka.png" alt="" />
+            </div>
+            <div class="name-project">
+              <h6>Luwuk Cofee Corner</h6>
+              <a href="https://github.com/Yusran027/Game_Tebak_Angka">
+                <img src="assets/icons/github-square.svg" alt="Open" />
+              </a>
+            </div>
+            <p>
+              This program is a web-based number guessing game that uses HTML
+              for structure, CSS for styling, and JavaScript for game logic.
+              Players enter a number between 1 and 10, and the "Search" button
+              checks the guess, updating the remaining attempts and options to
+              try again.
+            </p>
+            <div class="item-tool">
+              <div class="tool">
+                <img src="assets/logo/Html.png" alt="" />
+                <p>HTML5</p>
+              </div>
+              <div class="tool">
+                <img src="assets/logo/css.png" alt="" />
+                <p>CSS3</p>
+              </div>
+              <div class="tool">
+                <img src="assets/logo/Javascript.png" alt="" />
+                <p>Javascript</p>
+              </div>
+            </div>
+            <div class="link">
+              <a
+                href="https://yusran027.github.io/Game_Tebak_Angka/"
+                target="_blank"
+                >Link
+                <span>https://yusran027.github.io/Game_Tebak_Angka/</span></a
+              >
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="my-tech">
-        <h5>"Technologies I use to build websites."</h5>
-        <div class="tech-container">
-          <div class="tech-tool">
-            <img src="assets/logo/Javascript.png" alt="" />
-          </div>
-          <div class="tech-tool"><img src="assets/logo/Gsap.png" alt="" /></div>
-          <div class="tech-tool"><img src="assets/logo/Html.png" alt="" /></div>
-          <div class="tech-tool">
-            <img src="assets/logo/Tailwind.png" alt="" />
-          </div>
-          <div class="tech-tool">
-            <img src="assets/logo/Mysql_logo.png" alt="" />
-          </div>
-          <div class="tech-tool"><img src="assets/logo/css.png" alt="" /></div>
-          <div class="tech-tool">
-            <img src="assets/logo/PHP-logo.png" alt="" />
-          </div>
-          <div class="tech-tool">
-            <img src="assets/logo/icons8-bootstrap-50.png" alt="" />
-          </div>
+        <div class="pagination" id="pagination">
+          <a id="prev">Previous</a>
+          <a class="page-link" data-page="1">1</a>
+          <a class="page-link" data-page="2">2</a>
+          <a id="next">Next</a>
+          <p id="page-numbers"></p>
         </div>
       </div>
     </section>
@@ -1166,9 +1261,6 @@
     <script src="js/animations.js" defer></script>
     <script src="js/app.js" defer></script>
     <script src="js/script.js" defer></script>
-
-    <script>
-      // Simple GSAP animation for .tech-tool img elements
-    </script>
+    <script></script>
   </body>
 </html>

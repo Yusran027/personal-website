@@ -95,7 +95,6 @@ img.bima {
 
 /* Sub-Title */
 .sub-title-about,
-.sub-title-project,
 .sub-title-galery,
 .sub-title-career,
 .sub-title-certificate,
@@ -285,7 +284,6 @@ img.bima {
   color: var(--color-text);
   will-change: text-shadow;
 }
-
 
 /* Flickering Animation */
 @keyframes flicker {
@@ -613,21 +611,31 @@ img.bima {
 .project {
   width: 100%;
   position: relative;
+  padding: 5rem 7%;
+}
+.project .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 5rem 7%;
 }
 .project .text {
-  text-align: left;
+  text-align: justify;
   width: 100%;
   padding: 0 2.8rem;
 }
 
+.project .sub-title-project {
+display: flex;
+  flex-direction: row;
+  justify-content: center ;
+  align-items: center;
+  gap: 1rem;
+}
+
 .project-btn {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0 2.8rem;
 }
@@ -647,8 +655,10 @@ img.bima {
 .project .row {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
+  width: 100%;
+  padding: 0 10%;
 }
 
 .project .row .card {
@@ -656,7 +666,8 @@ img.bima {
   align-items: start;
   flex-direction: column;
   margin-top: 2rem;
-  width: 25rem;
+  width: 35%;
+  /* max-width: 25rem; */
   height: auto;
   padding: 1.2rem;
   border-radius: 1.2rem;
@@ -668,7 +679,6 @@ img.bima {
   z-index: 10;
   color: rgba(245, 245, 245, 0.623);
 }
-
 .project .row .card:hover {
   background: rgba(255, 255, 255, 0.15);
 }
@@ -782,10 +792,40 @@ img.bima {
   font-size: 0.8rem;
 }
 
+.project .container .pagination {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.project .container .pagination a {
+  color: var(--secondary);
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid var(--secondary);
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.project .container .pagination a:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.project .container .pagination .active {
+  background-color: var(--secondary);
+  color: white;
+}
+#page-numbers {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
 .project .my-tech {
-  margin: 3rem 0 0rem 0;
+  margin: 1rem 0 0rem 0;
   display: flex;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
 }
 .project .my-tech .tech-container {
@@ -1637,6 +1677,14 @@ img.bima {
   .sub-title-skill {
     align-self: start;
   }
+  .project .row {
+    padding: 0;
+  }
+
+  .project .row .card {
+    width: 30%;
+    box-sizing: border-box;
+  }
 
   .galery .container .item {
     width: 100%;
@@ -1783,7 +1831,8 @@ img.bima {
   .project .container .row {
     justify-content: center;
     width: 100%;
-    padding: 0 2.2rem;
+    flex-wrap: wrap;
+    padding: 0 7%;
   }
   .project .container .project-btn {
     width: 100%;
@@ -1806,9 +1855,15 @@ img.bima {
   .project .container .row .img-wrapper img {
     border-radius: 1rem;
   }
+
+  .project .my-tech{
+    text-align: start;
+    padding:0 2.2rem;
+  }
   .project .my-tech .tech-container {
     gap: 1rem;
     width: 100%;
+
   }
   .project .my-tech .tech-container img {
     height: 2rem;
