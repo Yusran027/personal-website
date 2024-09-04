@@ -1,5 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-
 // Hero Section start
 const box = document.querySelector(".flip-card");
 gsap.from(box, {
@@ -99,6 +98,7 @@ gsap.from(".project .text", {
   },
 });
 
+// fungsi & animasi pagination
 const cardsPerPage = 3;
 const dataContainer = document.querySelector(".project .row");
 const pagination = document.getElementById("pagination");
@@ -137,8 +137,6 @@ function displayPage(page, direction) {
     },
   });
 }
-
-// fungsi animasi pagination
 
 function updatePagination() {
   pageNumbers.textContent = `Page ${currentPage} of ${totalPages}`;
