@@ -81,17 +81,34 @@ for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener("click", animateButton, false);
 }
 
+// Fungsi Tab-button pada project section
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".splash-button.btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const tabId = tab.id;
+      const contentId = "content" + tabId.slice(-1);
+
+      tabs.forEach((t) => t.classList.remove("active"));
+      contents.forEach((c) => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(contentId).classList.add("active");
+    });
+  });
+});
+
 // fungsi untuk menonaktifkan auto scroll pada ceritificate section
 document.addEventListener("DOMContentLoaded", function () {
   const thumbnails = document.querySelectorAll("#thumbnail label");
-  let lastScrollPosition =
-    window.pageYOffset || document.documentElement.scrollTop;
+  let lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   thumbnails.forEach(function (label) {
     label.addEventListener("click", function (event) {
       // Simpan posisi scroll saat ini
-      lastScrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop;
+      lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
       // Biarkan event click terjadi
       setTimeout(() => {

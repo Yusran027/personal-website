@@ -28,6 +28,27 @@
   color: var(--color-text);
 }
 
+/* Scrollbar style */
+::-webkit-scrollbar {
+  background: whitesmoke;
+  position: absolute;
+  z-index: 100;
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px solid var(--secondary);
+  padding: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 30px;
+  box-shadow: 0 0 12px var(--secondary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bc13fe;
+}
+
 body {
   font-family: "roboto", "Open Sans", "Helvetica Neue", sans-serif;
   background-color: var(--bg);
@@ -71,6 +92,7 @@ span {
 
 .splash-button {
   overflow: visible !important;
+  font-size: 1rem;
 }
 
 /* Common Elements */
@@ -119,17 +141,16 @@ img.bima {
   flex-direction: column;
   z-index: 1;
   gap: 1rem;
+  bottom: 0;
 }
 
 .content-fixed .social-fixed {
   left: 1rem;
-  bottom: -3rem;
   align-items: center;
 }
 
 .content-fixed .email-fixed {
   right: 1rem;
-  bottom: -1rem;
 }
 
 .content-fixed .email-fixed a {
@@ -223,7 +244,7 @@ img.bima {
 
 .nav-links a {
   color: var(--color-text);
-  font-size: 12px;
+  font-size: 1rem;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
@@ -442,8 +463,8 @@ img.bima {
 
 .hero .container .flip-card {
   background-color: transparent;
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   perspective: 1000px;
   align-self: center;
   margin-bottom: 2rem;
@@ -476,8 +497,8 @@ img.bima {
 
 .hero .container .flip-card-front img,
 .hero .container .flip-card-back img {
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   object-fit: cover;
   border: 0.2rem solid var(--color-text);
@@ -619,11 +640,11 @@ img.bima {
   justify-content: center;
   text-align: center;
 }
-.project .text {
-  text-align: justify;
+/* .project .text {
+  text-align: center;
   width: 100%;
-  padding: 0 2.8rem;
-}
+  padding: 0 0 0 2.5rem;
+} */
 
 .project .sub-title-project {
   display: flex;
@@ -632,24 +653,33 @@ img.bima {
   align-items: center;
   gap: 1rem;
 }
-
-.project-btn {
+.project .tab-btn {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
   padding: 0 2.8rem;
 }
-.project-btn .splash-button.btn {
-  height: 2rem;
-  width: 8rem;
+.project .tab-btn .splash-button.btn {
+  height: 2.5rem;
+  width: 9rem;
   font-size: 0.9rem;
   box-shadow: none;
 }
-.project-btn .splash-button.btn.active {
-  box-shadow: 0px 0px 10px var(--secondary);
+
+.project .splash-button.active {
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-weight: 700;
 }
-.project-btn .splash-button.btn.disable {
-  opacity: 0.5;
+.project .tab-content {
+  display: none;
+  padding: 20px;
+  /* border: 1px solid #ddd; */
+  min-height: 49rem;
+  border-radius: 5px;
+}
+.project .tab-content.active {
+  display: block;
 }
 
 .project .row {
@@ -1657,6 +1687,10 @@ img.bima {
     transform: scaleX(0.2);
   }
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   .sub-title-about,
   .sub-title-project,
   .sub-title-galery,
@@ -1815,14 +1849,13 @@ img.bima {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
   }
   .project .container .row {
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
   }
-  .project .container .project-btn {
+  .project .container .tab-btn {
     width: 100%;
     padding: 0 2.2rem;
   }

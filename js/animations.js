@@ -283,8 +283,8 @@ gsap.utils.toArray(".item").forEach((item, index) => {
     delay: 0.2 * index,
     scrollTrigger: {
       trigger: item,
-      start: "top 90%",
-      toggleActions: "play none none reverse",
+      start: "top 100%",
+      // toggleActions: "play none none reverse",
     },
   });
 });
