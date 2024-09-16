@@ -129,11 +129,7 @@ function displayPage(page, direction) {
         }
       });
 
-      gsap.fromTo(
-        cards.slice(startIndex, endIndex),
-        { opacity: 0, x: direction === "next" ? 100 : -100 },
-        { duration: 0.5, opacity: 1, x: 0, stagger: 0.05 }
-      );
+      gsap.fromTo(cards.slice(startIndex, endIndex), { opacity: 0, x: direction === "next" ? 100 : -100 }, { duration: 0.5, opacity: 1, x: 0, stagger: 0.05 });
     },
   });
 }
@@ -240,6 +236,7 @@ gsap.from(".tech-tool", {
     once: true,
   },
 });
+
 
 // Galery Section Start
 gsap.from(".sub-title-galery", {

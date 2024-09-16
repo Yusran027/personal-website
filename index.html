@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YHL Personal Website</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Sarala:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/komponen.css" />
     <link rel="stylesheet" href="css/bg_glow.css" />
@@ -139,44 +141,12 @@
         </div>
         <div class="tab-btn">
           <button class="splash-button btn active" id="tab1">Web Developer</button>
-          <button class="splash-button btn" id="tab2">Design Graphic</button>
+          <button class="splash-button btn" id="tab2">Graphic Design</button>
           <button class="splash-button btn" id="tab3">Video Editing</button>
         </div>
         <div id="content1" class="tab-content active">
-          <!-- <h5>Junior Web Developer</h5> -->
-          <!-- <p class="text">This is a list of my projects to date.</p> -->
-          <!-- <div class="my-tech">
-          <h6>"Technologies I use to build websites."</h6>
-          <div class="tech-container">
-            <div class="tech-tool">
-              <img src="assets/logo/XD.png" alt="" />
-            </div>
-            <div class="tech-tool">
-              <img src="assets/logo/Html.png" alt="" />
-            </div>
-            <div class="tech-tool">
-              <img src="assets/logo/css.png" alt="" />
-            </div>
-            <div class="tech-tool">
-              <img src="assets/logo/Tailwind.png" alt="" />
-            </div>
-            <div class="tech-tool">
-              <img src="assets/logo/icons8-bootstrap-50.png" alt="" />
-            </div>
-            <div class="tech-tool">
-              <img src="assets/logo/Javascript.png" alt="" />
-            </div>
-            <div class="tech-tool">
-              <img src="assets/logo/Gsap.png" alt="" />
-            </div>
-            <div class="tech-tool">
-              <img src="assets/logo/PHP-logo.png" alt="" />
-            </div>
-            <div class="tech-tool">
-              <img src="assets/logo/Mysql_logo.png" alt="" />
-            </div>
-          </div>
-        </div> -->
+          <h2>Junior Frontend</h2>
+          <p>This is a list of my projects Website to date.</p>
           <div class="row">
             <div class="card">
               <div class="img-wrapper">
@@ -378,10 +348,60 @@
             <a id="next">Next</a>
             <p id="page-numbers"></p>
           </div>
+          <!-- <div class="my-tech">
+            <div class="tech-container">
+              <div class="tech-tool">
+                <img src="assets/logo/XD.png" alt="" />
+              </div>
+              <div class="tech-tool">
+                <img src="assets/logo/Html.png" alt="" />
+              </div>
+              <div class="tech-tool">
+                <img src="assets/logo/css.png" alt="" />
+              </div>
+              <div class="tech-tool">
+                <img src="assets/logo/Tailwind.png" alt="" />
+              </div>
+              <div class="tech-tool">
+                <img src="assets/logo/icons8-bootstrap-50.png" alt="" />
+              </div>
+              <div class="tech-tool">
+                <img src="assets/logo/Javascript.png" alt="" />
+              </div>
+              <div class="tech-tool">
+                <img src="assets/logo/Gsap.png" alt="" />
+              </div>
+              <div class="tech-tool">
+                <img src="assets/logo/PHP-logo.png" alt="" />
+              </div>
+              <div class="tech-tool">
+                <img src="assets/logo/Mysql_logo.png" alt="" />
+              </div>
+            </div>
+            <h6>"Technologies I use to build websites."</h6>
+          </div> -->
         </div>
         <div id="content2" class="tab-content">
-          <h2>Coming Soon...</h2>
-          <p>Konten untuk Design Graphi.</p>
+          <!-- <h2>Graphic Design</h2> -->
+          <div class="cont-design-graphic">
+            <div class="pas-photo">
+              <img src="assets/img/Pas-photo.png" alt="" />
+            </div>
+            <div class="about-design">
+              <h2>Hello !</h2>
+              <p>Thank you for visiting this page. On this page, you can view the design projects I have created since 2022 until now. Please press the button below.</p>
+              <h4>My Tools</h4>
+              <div class="design-tools">
+                <div class="d-tool"><img src="assets/icons/illustrator.png" alt="" /> Illustrator</div>
+                <div class="d-tool"><img src="assets/icons/Figma.png" alt="" /> Figma</div>
+                <div class="d-tool"><img src="assets/icons/canva.png" alt="" /> Canva</div>
+                <div class="d-tool"><img src="assets/icons/Adobe_XD.png" alt="" /> Adobe XD</div>
+                <div class="d-tool"><img src="assets/icons/photoshop.png" alt="" /> Photoshop</div>
+              </div>
+              <a href="https://yhportfolio.framer.ai/Design_Grafis">View My Design</a>
+            </div>
+            <div class="bar-design"></div>
+          </div>
         </div>
         <div id="content3" class="tab-content">
           <h2>Coming Soon...</h2>
@@ -389,6 +409,7 @@
         </div>
       </div>
     </section>
+
     <section class="galery" id="galery">
       <div class="container">
         <div class="title-galery">
@@ -672,10 +693,12 @@
                 </div>
                 <figcaption>
                   <h6>Learn Javascript Programming Language With Practical Interaction.</h6>
-                  <p>- Getting Started With Javascript Variables,Values and Data Types, Operators and Operands</p>
-                  <p>- Write Javascript scripts and Gain knowledge in regard to general javascript programming concepts</p>
-                  <p>- Introduction And Use of Javascript Variables, Javascript Arrays, Javascript Objects</p>
-                  <p>- Introduction And Use Of Conditional Statements In Javascript</p>
+                  <ul>
+                    <li>Getting Started With Javascript Variables,Values and Data Types, Operators and Operands</li>
+                    <li>Write Javascript scripts and Gain knowledge in regard to general javascript programming concepts</li>
+                    <li>Introduction And Use of Javascript Variables, Javascript Arrays, Javascript Objects</li>
+                    <li>Introduction And Use Of Conditional Statements In Javascript</li>
+                  </ul>
                 </figcaption>
               </figure>
             </li>
@@ -686,15 +709,17 @@
                 </div>
                 <figcaption>
                   <h6>Master in JavaScript with Data Visualization, Validations!</h6>
-                  <p>- Become an advanced, confident JavaScript developer from scratch</p>
-                  <p>- Become job-ready by understanding how JavaScript really works behind the webpage</p>
-                  <p>- JavaScript fundamentals: variables, if/else, operators, boolean logic, functions, arrays, objects, strings, control flow loops, etc.</p>
-                  <p>- How to think and work like a developer: problem-solving, researching, workflows</p>
-                  <p>- Data Visualization: Using Google Charts to create line graph, scatter plots, bar, pie, 3D pie charts, etc.</p>
-                  <p>- Client-side Validations: On Submit, input, login form, password strength check, etc.</p>
-                  <p>- Error Handling: How to apply try catch finally block coding to handle real-time errors.</p>
-                  <p>- ChatGPT + JavaScript basic Calculator program creation idea and apply</p>
-                  <p>- learn What is Generative AI for prompt engineering</p>
+                  <ul>
+                    <li>Become an advanced, confident JavaScript developer from scratch</li>
+                    <li>Become job-ready by understanding how JavaScript really works behind the webpage</li>
+                    <li>JavaScript fundamentals: variables, if/else, operators, boolean logic, functions, arrays, objects, strings, control flow loops, etc.</li>
+                    <li>How to think and work like a developer: problem-solving, researching, workflows</li>
+                    <li>Data Visualization: Using Google Charts to create line graph, scatter plots, bar, pie, 3D pie charts, etc.</li>
+                    <li>Client-side Validations: On Submit, input, login form, password strength check, etc.</li>
+                    <li>Error Handling: How to apply try catch finally block coding to handle real-time errors.</li>
+                    <li>ChatGPT + JavaScript basic Calculator program creation idea and apply</li>
+                    <li>learn What is Generative AI for prompt engineering</li>
+                  </ul>
                 </figcaption>
               </figure>
             </li>
@@ -887,6 +912,7 @@
         <p>&copy; 2024 YHL. All rights reserved.</p>
       </div>
     </footer>
+
     <script src="js/particles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>

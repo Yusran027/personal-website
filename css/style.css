@@ -50,8 +50,9 @@
 }
 
 body {
-  font-family: "roboto", "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Sarala", sans-serif;
   background-color: var(--bg);
+  letter-spacing: normal;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;
@@ -326,7 +327,7 @@ img.bima {
 }
 
 /* Modal Sertificate */
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   width: 100%;
@@ -389,7 +390,6 @@ img.bima {
   height: auto;
   align-self: center;
   background-size: cover;
-  /* object-fit: cover; */
   overflow: hidden;
 }
 
@@ -408,7 +408,6 @@ img.bima {
   cursor: pointer;
 }
 
-/* Modal content visible with animation */
 
 .modal-content.show {
   transform: translateY(0);
@@ -431,7 +430,7 @@ img.bima {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
 /* Hero Section */
 .hero {
@@ -456,6 +455,9 @@ img.bima {
   fill: 2px solid #fff;
 }
 
+.hero .container h2 {
+  font-family: "MuseoModerno", sans-serif;
+}
 .hero .container h5 {
   font-weight: 300;
   color: #ffffff8f;
@@ -604,8 +606,10 @@ img.bima {
 
 .about .content .about-me .animated-paragraph {
   margin-bottom: 2rem;
+  line-height: normal;
 }
 .about .content .about-me .animated-paragraph span {
+  font-size: 1.1rem;
   opacity: 0.15;
   color: #fff;
 }
@@ -649,13 +653,13 @@ img.bima {
 .project .sub-title-project {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1rem;
 }
 .project .tab-btn {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: 0.5rem;
   padding: 0 2.8rem;
 }
@@ -674,6 +678,8 @@ img.bima {
 .project .tab-content {
   display: none;
   padding: 20px;
+  /* height: 100vh;
+  width: 100vw; */
   /* border: 1px solid #ddd; */
   min-height: 49rem;
   border-radius: 5px;
@@ -682,6 +688,7 @@ img.bima {
   display: block;
 }
 
+/* Project website */
 .project .row {
   display: flex;
   gap: 2rem;
@@ -860,15 +867,17 @@ img.bima {
 }
 .project .my-tech .tech-container {
   justify-content: center;
+  align-self: center;
   display: flex;
-  align-items: center;
-  width: 100%;
   flex-direction: row;
-  padding: 1rem;
+  align-items: center;
+  padding: 1rem 15rem;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
   gap: 2rem;
 }
 .project .my-tech .tech-container img {
-  height: 3rem;
+  height: 2.5rem;
   width: auto;
   opacity: 0.5;
   filter: grayscale(80%);
@@ -881,7 +890,94 @@ img.bima {
   filter: grayscale(0%);
   scale: 1.1 !important;
 }
+/* Procect Design */
+.project #content2 .cont-design-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+.project #content2 .cont-design-graphic .pas-photo img {
+  height: 35rem;
+  margin-left: 3rem;
+  transform: rotate(-10deg);
+  transition: transform 0.5s ease;
+  box-shadow: 5px 5px 5px #000000c0;
+}
+.project #content2 .cont-design-graphic .about-design {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  align-self: flex-end;
+  flex-direction: column;
+  padding: 3rem 0;
+  gap: 1rem;
+}
+.project #content2 .cont-design-graphic .about-design h2 {
+  font-style: italic;
+  margin-top: 1rem;
+}
+.project #content2 .cont-design-graphic .about-design p {
+  text-align: start;
+  font-size: 1.3rem;
+}
+.project #content2 .cont-design-graphic .about-design h4 {
+  color: #000000;
+  margin-top: 3rem;
+  font-style: italic;
+  font-weight: 700;
+  text-shadow: 1px 0px 3px #fff;
+}
 
+.project #content2 .cont-design-graphic .design-tools {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.project #content2 .cont-design-graphic .design-tools .d-tool {
+  padding: 0.5rem 1rem;
+  display: flex;
+  background-color: #fff;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+  color: #000000;
+
+  box-shadow: 2px 2px 2px #000000c0;
+}
+.project #content2 .cont-design-graphic .design-tools img {
+  height: 2rem;
+}
+.project #content2 .cont-design-graphic .about-design a {
+  text-decoration: none;
+  color: #000000;
+  background-color: var(--secondary);
+  margin-top: 3rem;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  transition: all 300ms ease;
+}
+.project #content2 .cont-design-graphic .about-design a:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+  box-shadow: 0 0 6px var(--secondary);
+}
+.project #content2 .cont-design-graphic .bar-design {
+  height: 10rem;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(180deg, #fff, #00c8b9);
+  bottom: 20rem;
+}
 /* Galery Section */
 
 .galery {
@@ -1387,7 +1483,7 @@ img.bima {
   flex: 1 0 100%;
   width: 40rem;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 300ms ease-out;
   box-sizing: border-box;
   white-space: normal;
@@ -1417,11 +1513,24 @@ img.bima {
 
   figcaption {
     align-self: flex-end;
-    padding: 20px 20px 0 20px;
-    flex: 0 0 auto;
-    min-width: 150px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* Membungkus teks yang panjang agar turun ke baris berikutnya */
+    word-break: break-word; /* Tambahan untuk memastikan teks terpotong dengan baik */
+    hyphens: auto; /* Jika diinginkan, menambahkan tanda hubung untuk pemotongan kata */
+    list-style-type: disc;
+    min-width: 20rem;
+    margin-left: 2rem;
   }
-
+  @media (max-width: 65rem) {
+    figcaption {
+      display: none;
+    }
+  }
+  h6 {
+    margin-left: -2rem;
+  }
   .credit {
     margin-top: 1rem;
     color: rgba(0, 0, 0, 0.5);
@@ -1438,17 +1547,15 @@ img.bima {
   padding: 0;
   margin: 0;
   display: flex;
-
   margin: 0 -10px;
-
   .carousel__slides + & {
     margin-top: 20px;
   }
 
   li {
+    margin: 0 10px;
     flex: 1 1 auto;
     max-width: calc((100% / 6) - 20px);
-    margin: 0 10px;
     transition: all 300ms ease-in-out;
   }
 
@@ -1462,7 +1569,6 @@ img.bima {
 }
 
 /* skills start */
-/* Skill Section */
 .skill {
   display: flex;
   justify-content: center;
@@ -1855,11 +1961,15 @@ img.bima {
     justify-content: center;
     flex-direction: column;
   }
+  .project .container {
+    height: 100%;
+  }
   .project .container .row {
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     padding: 0;
+    margin-top: 2rem;
   }
   .project .container .tab-btn {
     width: 100%;
@@ -1896,6 +2006,44 @@ img.bima {
   .project .my-tech .tech-container img {
     height: 2rem;
   }
+
+  .project .tab-content {
+    min-height: 0;
+  }
+  /* Project Design */
+  .project #content2 .cont-design-graphic {
+    align-self: flex-start;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+  }
+  .project #content2 .cont-design-graphic .pas-photo {
+    order: 2;
+    margin: 2.5rem 0;
+  }
+  .project #content2 .cont-design-graphic .pas-photo img {
+    margin-left: 0;
+    height: 25rem;
+  }
+  .project #content2 .cont-design-graphic .about-design {
+    padding: 0;
+    order: 1;
+  }
+  .project #content2 .cont-design-graphic .about-design h4 {
+    display: none;
+  }
+  .project #content2 .cont-design-graphic .about-design .design-tools {
+    display: none;
+  }
+  .project #content2 .cont-design-graphic .about-design a {
+    margin-top: 0;
+  }
+  .project #content2 .cont-design-graphic .bar-design {
+    /* display: none; */
+    bottom: 10rem;
+    height: 7rem;
+  }
+
   /* galery */
 
   .galery {
