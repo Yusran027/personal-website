@@ -50,7 +50,7 @@
 }
 
 body {
-  font-family: "Sarala", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   background-color: var(--bg);
   letter-spacing: normal;
   overflow-x: hidden;
@@ -81,9 +81,12 @@ h6 {
 p {
   font-size: var(--font-size-p);
   line-height: var(--line-height-p);
+  font-family: "Sarala", sans-serif;
 }
 ul {
   letter-spacing: 0.02rem;
+
+  font-family: "Sarala", sans-serif;
 }
 
 span {
@@ -286,6 +289,9 @@ img.bima {
 }
 
 #hamburger-menu {
+  display: none;
+}
+.wrapper {
   display: none;
 }
 .navbar .navbar-extra img {
@@ -703,7 +709,7 @@ img.bima {
   align-items: start;
   flex-direction: column;
   margin-top: 2rem;
-  width: 35%;
+  width: 100%;
   max-width: 25rem;
   height: auto;
   padding: 1.2rem;
@@ -801,33 +807,42 @@ img.bima {
 
 .project .row .card .link {
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   border: 1px solid var(--secondary);
   border-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 1rem;
   text-decoration: none;
   color: #fff;
-  margin-top: auto;
+  cursor: pointer;
 }
 
 .project .row .card .link:hover {
   background: #00c8bb2c;
 }
+.project .row .card .link img {
+  height: 1.4rem;
+  width: auto;
+
+  border-radius: 0;
+}
 
 .project .row .card .link a {
-  font-size: 0.8rem;
+  font-size: 1rem;
   align-items: center;
+  display: flex;
+  gap: 0.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.project .row .card .link span {
+/* .project .row .card .link span {
   color: var(--secondary);
   font-size: 0.8rem;
-}
+} */
 
 .project .container .pagination {
   text-align: center;
@@ -897,7 +912,11 @@ img.bima {
   align-items: center;
   flex-direction: row;
   gap: 5rem;
+  font-family: "Sarala", sans-serif;
   margin-top: 5rem;
+}
+.project #content2 .cont-design-graphic .pas-photo {
+  z-index: 11111;
 }
 .project #content2 .cont-design-graphic .pas-photo img {
   height: 35rem;
@@ -975,7 +994,7 @@ img.bima {
   width: 100vw;
   position: absolute;
   z-index: -1;
-  background: linear-gradient(180deg, #fff, #00c8b9);
+  background: linear-gradient(180deg, #4bcdf5, #00c8b9);
   bottom: 20rem;
 }
 /* Galery Section */
@@ -1222,6 +1241,7 @@ img.bima {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Sarala", sans-serif;
 }
 
 .career .gradient-cards .line {
@@ -1906,6 +1926,156 @@ img.bima {
     width: 8rem;
   } */
 
+  /* Menu icon */
+  .wrapper {
+    margin-left: 82%;
+    margin-top: 165%;
+    position: fixed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fab {
+      background: #00c8b9;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      z-index: 3;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fab-animation-reverse 0.4s ease-out forwards;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 4px;
+        background: #ffffff;
+      }
+
+      &::before {
+        width: 4px;
+        height: 18px;
+      }
+
+      &::after {
+        width: 18px;
+        height: 4px;
+      }
+    }
+
+    .fac {
+      width: 50px;
+      height: 270px;
+      border-radius: 64px;
+      position: absolute;
+      background: #00c8b9;
+      z-index: 2;
+      padding: 2rem 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      top: -180px;
+      display: flex;
+      gap: 1.5rem;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 1.5rem;
+      transition: opacity 0.2s ease-in, top 0.2s ease-in, width 0.1s ease-in;
+
+      a {
+        opacity: 1;
+        color: #000527 !important;
+
+        &:hover {
+          transition: 0.2s;
+          opacity: 1;
+          color: darken(#344955, 2%);
+        }
+      }
+    }
+
+    input {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      cursor: pointer;
+      position: absolute;
+      z-index: 5;
+      opacity: 0;
+
+      &:checked {
+        ~ .fab {
+          animation: fab-animation 0.4s ease-out forwards;
+        }
+
+        ~ .fac {
+          width: 50px;
+          height: 270px;
+          animation: fac-animation 0.4s ease-out forwards 0.1s;
+          top: -285px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  /* 
+  @keyframes fab-animation {
+    0% {
+      transform: rotate(0) scale(1);
+    }
+    20% {
+      transform: rotate(60deg) scale(0.93);
+    }
+    55% {
+      transform: rotate(35deg) scale(0.97);
+    }
+    80% {
+      transform: rotate(48deg) scale(0.94);
+    }
+    100% {
+      transform: rotate(45deg) scale(0.95);
+    }
+  }
+
+  @keyframes fab-animation-reverse {
+    0% {
+      transform: rotate(45deg) scale(0.95);
+    }
+    20% {
+      transform: rotate(-15deg);
+    }
+    55% {
+      transform: rotate(10deg);
+    }
+    80% {
+      transform: rotate(-3deg);
+    }
+    100% {
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  @keyframes fac-animation {
+    0% {
+      transform: scale(1, 1);
+    }
+    33% {
+      transform: scale(0.95, 1.05);
+    }
+    66% {
+      transform: scale(1.05, 0.95);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  } */
+
   /* hero */
   .hero {
     padding: 0 7%;
@@ -2018,7 +2188,7 @@ img.bima {
     margin-top: 0;
   }
   .project #content2 .cont-design-graphic .pas-photo {
-    order: 2;
+    order: 1;
     margin: 2.5rem 0;
   }
   .project #content2 .cont-design-graphic .pas-photo img {
@@ -2027,21 +2197,24 @@ img.bima {
   }
   .project #content2 .cont-design-graphic .about-design {
     padding: 0;
-    order: 1;
+    order: 2;
   }
   .project #content2 .cont-design-graphic .about-design h4 {
     display: none;
   }
   .project #content2 .cont-design-graphic .about-design .design-tools {
-    display: none;
+    /* display: none; */
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
   .project #content2 .cont-design-graphic .about-design a {
     margin-top: 0;
+    font-size: 1rem;
   }
   .project #content2 .cont-design-graphic .bar-design {
     /* display: none; */
-    bottom: 10rem;
-    height: 7rem;
+    top: 25rem;
+    height: 10rem;
   }
 
   /* galery */

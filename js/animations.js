@@ -237,7 +237,6 @@ gsap.from(".tech-tool", {
   },
 });
 
-
 // Galery Section Start
 gsap.from(".sub-title-galery", {
   opacity: 0,
